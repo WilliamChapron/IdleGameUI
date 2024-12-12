@@ -1,0 +1,21 @@
+.factory-menu {
+    width: 300px;
+    height: 200px;
+    background-color: #2c3e50;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.factory-menu Label {
+    color: white;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.factory-menu Button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}

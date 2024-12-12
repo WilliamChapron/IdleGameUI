@@ -24,12 +24,12 @@ public class Factory : MonoBehaviour
 
     public Factory(string name, float price, float upgradePrice, float productivityPerSecond, float productivityPerClick, Vector3 position)
     {
-        this.factoryName = name;
-        this.purchasePrice = price;
         this.upgradePrice = upgradePrice;
+        factoryName = name;
+        purchasePrice = price;
         this.productivityPerSecond = productivityPerSecond;
         this.productivityPerClick = productivityPerClick;
-        this.level = 1;
+        level = 1;
         this.position = position;
     }
 
