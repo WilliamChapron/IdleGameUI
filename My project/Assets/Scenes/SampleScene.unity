@@ -338,6 +338,7 @@ GameObject:
   - component: {fileID: 359881982}
   - component: {fileID: 359881984}
   - component: {fileID: 359881983}
+  - component: {fileID: 359881985}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -391,6 +392,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_factoryClickMenuI: {fileID: 7443418823593017515}
+--- !u!114 &359881985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359881981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c150cb808c90c4e98386ecd8b32ae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _factoryData: {fileID: 359881984}
+  currentCoins: 0
+  globalProductivity: 0
+  totalFactories: 0
+  factoryTypeCount: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -708,6 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1f8d5a3f128c7a4097b2413498d780c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiDocument: {fileID: 7488019207325713490}
 --- !u!1 &7443418823593017515
 GameObject:
   m_ObjectHideFlags: 0

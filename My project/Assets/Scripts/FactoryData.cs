@@ -5,6 +5,7 @@ public class FactoryData : MonoBehaviour
 {
     private Dictionary<int, Factory> factoryDictionary;
     public Dictionary<int, Factory> FactoryDictionary => factoryDictionary;
+
     private List<Factory> factories;
     private Factory m_curFactory;
     private int nextFactoryId = 0;
