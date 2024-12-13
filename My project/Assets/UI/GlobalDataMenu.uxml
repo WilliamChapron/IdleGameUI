@@ -1,5 +1,38 @@
-<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xmlns:engine="UnityEngine.UIElements" 
+             xmlns:editor="UnityEditor.UIElements" 
+             noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" 
+             editor-extension-mode="False">
+
     <Style src="project://database/Assets/UI/GlobalDataMenu.uss?fileID=7433441132597879392&amp;guid=f47c5ad21eb8b3144981ff38d6f5ca91&amp;type=3#GlobalDataMenu" />
 
+    <engine:VisualElement class="general-data-container" name="generalDataContainer">
 
+        <engine:Button text="Toggle" name="toggleButton" class="toggle-button" />
+
+        <engine:VisualElement class="content-container" name="content-container">
+
+            <engine:VisualElement class="data-row">
+                <engine:Label text="Current Coins :" class="data-label" />
+                <engine:Label text="0" class="data-field" />
+            </engine:VisualElement>
+
+            <engine:VisualElement class="data-row">
+                <engine:Label text="Global Productivity :" class="data-label" />
+                <engine:Label text="0" class="data-field" />
+            </engine:VisualElement>
+
+            <engine:VisualElement class="data-row">
+                <engine:Label text="Total Factories :" class="data-label" />
+                <engine:Label text="0" class="data-field" />
+            </engine:VisualElement>
+
+            <engine:VisualElement class="data-row">
+                <engine:Label text="Factory Type Count :" class="data-label" />
+                <engine:Label text="0" class="data-field" />
+            </engine:VisualElement>
+
+        </engine:VisualElement>
+
+    </engine:VisualElement>
 </engine:UXML>
