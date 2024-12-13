@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/HUD.uss?fileID=7433441132597879392&amp;guid=aba42f110176dd34a8a09a0701c706b4&amp;type=3#HUD" />
+    <ui:VisualElement name="hud" class="hud-container" style="flex-direction: row; align-self: auto; align-items: flex-start; justify-content: flex-start;">
+        <ui:Label text="In Stock" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="in-stock-count" text="0" class="counter-label" style="margin-top: 24px; margin-right: 34px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Label text="Total Count:" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="total-count" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Button name="clicker-button" class="middle-button" style="align-self: center; justify-content: flex-start; position: absolute; top: 50%; left: 50%; right: auto; bottom: auto; translate: -50% -50%;" />
+    </ui:VisualElement>
+</ui:UXML>
