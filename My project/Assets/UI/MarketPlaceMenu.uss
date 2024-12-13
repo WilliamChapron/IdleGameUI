@@ -1,0 +1,110 @@
+.menu-principal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    translate: -50% -50%;
+    -unity-font-definition: url("project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&guid=f39766804d4f264409c44e46b6697e49&type=3#Winter Minie");
+    background-image: url("project://database/Assets/UISprite/jungle.png?fileID=3663726278293408576&guid=218b05d11cc39a54ca86ea06fb62fa2d&type=3#jungle_4");
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.navigation-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: -200px;
+    margin-bottom: 20px;
+}
+
+.category-button {
+    background-color: rgba(0, 123, 255, 0);
+    color: black;
+    padding: 60px 70px;
+    margin-left:40px;
+        margin-right:40px;
+        margin-top:100px;
+    margin-bottom:60px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    -unity-font-definition: url("project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&guid=f39766804d4f264409c44e46b6697e49&type=3#Winter Minie");
+    background-image: url("project://database/Assets/UISprite/green.png?fileID=-6425500650803203713&guid=212a8c1e0f3eeec42a4386622c3e6614&type=3#green_13");
+}
+
+.category1-container, .category2-container  {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    width: 70%;
+    background-color: transparent;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.factory-box {
+    padding: 20px;
+    border: 20px solid black;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    width: 30%;
+    height: auto;
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    border-bottom-color: rgb(0, 0, 0);
+    border-left-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.factory-image {
+    background-image: url("project://database/Assets/UISprite/illustration-of-cute-cozy-greenhouse-for-decorative-flowers-vector-removebg-preview.png?fileID=2800000&guid=a3b4d7e1a9e1e2e49a52b568ba6b49f3&type=3#illustration-of-cute-cozy-greenhouse-for-decorative-flowers-vector-removebg-preview");
+    background-size: contain;
+    width: 300px;
+    height: 300px;
+    margin-top: 10%;
+}
+
+.factory-label {
+    top: 0;
+    position: absolute;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.factory-price-button {
+    background-color: rgb(255, 165, 0);
+    color: white;
+    padding: 20px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: transparent;
+    transition: background-color 0.3s, transform 0.3s;
+    background-image: url("project://database/Assets/UISprite/buttons.png?fileID=1008705478319212569&guid=ba49122442cea004c9cffaa0814a7914&type=3#buttons_5");
+}
