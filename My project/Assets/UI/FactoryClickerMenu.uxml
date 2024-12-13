@@ -1,0 +1,9 @@
+<UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="UnityEngine.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" schemaLocation="UnityEngine.UIElements ../UIElementsSchema/UnityEngine.UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/FactoryClickMenu.uss?fileID=7433441132597879392&amp;guid=68a2a70ecefa86a4ba820e695e5ff09c&amp;type=3#FactoryClickMenu" />
+    <VisualElement name="factory-menu" class="factory-menu">
+        <Label name="factoryNameLabel" text="Nom de l&apos;usine" />
+        <Label name="productivityLabel" text="Productivité: 0" />
+        <Button name="upgradeButton" text="Améliorer" />
+        <Button name="closeButton" text="Fermer" />
+    </VisualElement>
+</UXML>

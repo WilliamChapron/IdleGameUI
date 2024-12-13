@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class Factory : MonoBehaviour
+public class Factory
 {
     // 
     public string factoryName;
