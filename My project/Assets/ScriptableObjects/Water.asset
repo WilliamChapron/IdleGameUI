@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad42c0b3d37b64446ad91db379a7e624, type: 3}
   m_Name: Water
   m_EditorClassIdentifier: 
-  _count: 0
+  _count: 100
   _price: 1
   _currency: {fileID: 11400000, guid: 4be77df878a46c14e9bfd870935d9798, type: 2}
