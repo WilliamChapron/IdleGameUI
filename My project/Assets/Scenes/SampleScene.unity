@@ -823,6 +823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_uiDocument: {fileID: 1906691541}
+  handCursorTexture: {fileID: 2800000, guid: 5c0e13e964e4d78409ca6867d9fb9f40, type: 3}
 --- !u!4 &2416427078056653049
 Transform:
   m_ObjectHideFlags: 0

@@ -1,20 +1,33 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/MarketPlaceMenu.uss?fileID=7433441132597879392&amp;guid=d035765b42e159247b8b70ea4109fd77&amp;type=3#MarketPlaceMenu" />
     <engine:VisualElement name="menu-principal" class="menu-principal">
+        <engine:Button name="close-button" class="close-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
         <engine:VisualElement name="navigation-buttons" class="navigation-buttons">
-            <engine:Button text="Category 1" name="category1-button" class="category-button" />
-            <engine:Button text="Category 2" name="category2-button" class="category-button" />
+            <engine:Button text="ACHAT" name="category1-button" class="category-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            <engine:Button text="BONUSES" name="category2-button" class="category-button" style="border-left-color: rgb(104, 104, 104); border-right-color: rgb(104, 104, 104); border-top-color: rgb(104, 104, 104); border-bottom-color: rgb(104, 104, 104); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
         </engine:VisualElement>
-        <engine:VisualElement name="category1-container" class="category1-container">
+        <engine:VisualElement name="category1-container" class="category-container">
             <engine:VisualElement name="factory-box" class="factory-box">
                 <engine:Label text="Factory 1" name="factory-label" class="factory-label" />
                 <engine:VisualElement name="factory-image" class="factory-image" />
-                <engine:Button text="Price: $500" name="factory-price-button" class="factory-price-button" />
+                <engine:Button text="Price: $500" name="factory-price-button" class="factory-price-button" style="border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
             </engine:VisualElement>
             <engine:VisualElement name="factory-box" class="factory-box">
                 <engine:Label text="Factory 2" name="factory-label" class="factory-label" />
                 <engine:VisualElement name="factory-image" class="factory-image" />
-                <engine:Button text="Price: $500" name="factory-price-button" class="factory-price-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+                <engine:Button text="Price: $500" name="factory-price-button" class="factory-price-button" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement name="category2-container" class="category-container">
+            <engine:VisualElement name="factory-box" class="factory-box">
+                <engine:Label text="Factory 3" name="factory-label" class="factory-label" />
+                <engine:VisualElement name="factory-image" class="factory-image" />
+                <engine:Button text="Price: $14500" name="factory-price-button" class="factory-price-button" style="border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+            </engine:VisualElement>
+            <engine:VisualElement name="factory-box" class="factory-box">
+                <engine:Label text="Factory 4" name="factory-label" class="factory-label" />
+                <engine:VisualElement name="factory-image" class="factory-image" />
+                <engine:Button text="Price: $3434500" name="factory-price-button" class="factory-price-button" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
             </engine:VisualElement>
         </engine:VisualElement>
     </engine:VisualElement>
