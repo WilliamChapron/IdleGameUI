@@ -1,0 +1,36 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/FactoryManage.uss?fileID=7433441132597879392&amp;guid=0f16c282ac7c36f4c85063be5b4069cf&amp;type=3#FactoryManage" />
+
+    <engine:VisualElement class="factory-manage-container" name="factory-manage-container">
+
+        <engine:VisualElement class="content-container" name="content-container">
+
+            <engine:ScrollView class="factory-container">
+
+                <engine:VisualElement class="factory-box">
+                    <engine:VisualElement class="visual-section">
+                        <engine:Image class="factory-image" source="path/to/image1.jpg" />
+
+                        <engine:VisualElement class="sub-visual-section">
+                            <engine:Label text="Factory 1" class="factory-name" />
+                            <engine:Label text="Number of Factories: 5" class="factory-count" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+
+                    <engine:VisualElement class="management-section">
+                        <engine:Label text="Current Productivity: 100" class="productivity-current" />
+                        <engine:Button text="100$" class="improve-price-btn" />
+                        <engine:Label text="Future Productivity: 120" class="productivity-future" />
+                    </engine:VisualElement>
+                </engine:VisualElement>
+
+            </engine:ScrollView>
+
+
+
+        </engine:VisualElement>
+
+        <engine:Button text="Toggle" name="toggle-button" class="toggle-button" />
+
+    </engine:VisualElement>
+</engine:UXML>

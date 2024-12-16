@@ -1,0 +1,44 @@
+
+.select-menu-container {
+    position: absolute;              
+    width:30%;
+    bottom: 0px;    
+    left:50%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    translate: -50% 0%;
+    border-radius: 10px;           /* Coins arrondis */
+    padding: 10px 20px;            /* Espacement interne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre pour plus de visibilité */
+    z-index: 999;                  /* Assure que le menu est au-dessus des autres éléments */
+}
+
+/* Conteneur des boutons */
+.buttons-container {
+    
+    display: flex;                 /* Aligne les boutons horizontalement */
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;           /* Centrage vertical des boutons */
+}
+
+/* Styles pour chaque bouton d'icône */
+.icon-button {
+    background: transparent;      /* Pas de fond */
+    border: none;                  /* Pas de bordure */
+    padding: 0;                    /* Pas de padding */
+    cursor: pointer;               /* Curseur en main pour interaction */
+    transition: transform 0.3s ease; /* Animation au survol */
+}
+
+.icon-button:hover {
+        scale:1.3;
+}
+
+
+/* Styles pour les images d'icônes */
+.icon-image {
+    width: 100px;                   /* Taille de l'icône */
+    height: 100px;                  /* Taille de l'icône */
+    object-fit: contain;           /* Garder l'aspect de l'image sans la déformer */
+    transition: opacity 0.3s ease; /* Animation pour l'opacité au survol */
+}
