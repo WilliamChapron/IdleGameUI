@@ -23,6 +23,8 @@ public class FactoryManageUIController : MonoBehaviour
         _toggleButton = root.Q<Button>("toggle-button");
 
         _toggleButton.clicked += ToggleMenu;
+
+        ToggleMenu();
     }
 
     private void ToggleMenu()

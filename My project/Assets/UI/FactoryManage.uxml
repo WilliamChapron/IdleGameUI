@@ -1,36 +1,33 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/FactoryManage.uss?fileID=7433441132597879392&amp;guid=0f16c282ac7c36f4c85063be5b4069cf&amp;type=3#FactoryManage" />
-
-    <engine:VisualElement class="factory-manage-container" name="factory-manage-container">
-
-        <engine:VisualElement class="content-container" name="content-container">
-
-            <engine:ScrollView class="factory-container">
-
-                <engine:VisualElement class="factory-box">
+    <engine:VisualElement name="factory-manage-container" class="factory-manage-container" style="-unity-font-definition: url(&quot;project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&amp;guid=f39766804d4f264409c44e46b6697e49&amp;type=3#Winter Minie&quot;);">
+        <engine:VisualElement name="content-container" class="content-container">
+            <engine:ScrollView class="factory-container unity-scroll-view--horizontal">
+                <engine:VisualElement class="factory-box" style="border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgb(0, 119, 0); border-right-color: rgb(0, 119, 0); border-top-color: rgb(0, 119, 0); border-bottom-color: rgb(0, 119, 0);">
                     <engine:VisualElement class="visual-section">
-                        <engine:Image class="factory-image" source="path/to/image1.jpg" />
-
+                        <engine:Image source="path/to/image1.jpg" class="factory-image"/>
                         <engine:VisualElement class="sub-visual-section">
                             <engine:Label text="Factory 1" class="factory-name" />
-                            <engine:Label text="Number of Factories: 5" class="factory-count" />
+                            <engine:VisualElement class="factory-count">
+                                <engine:Label text="Factory count :" class="text-label" />
+                                <engine:Label text="5" class="count-label" />
+                            </engine:VisualElement>
                         </engine:VisualElement>
                     </engine:VisualElement>
-
                     <engine:VisualElement class="management-section">
-                        <engine:Label text="Current Productivity: 100" class="productivity-current" />
-                        <engine:Button text="100$" class="improve-price-btn" />
-                        <engine:Label text="Future Productivity: 120" class="productivity-future" />
+                        <engine:VisualElement class="current-productivity">
+                            <engine:Label class="icon-label-current" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
+                        <engine:Button text="100$" class="improve-price-btn"/>
+                        <engine:VisualElement class="future-productivity">
+                            <engine:Label class="icon-label-future" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
                     </engine:VisualElement>
                 </engine:VisualElement>
-
             </engine:ScrollView>
-
-
-
         </engine:VisualElement>
-
-        <engine:Button text="Toggle" name="toggle-button" class="toggle-button" />
-
+        <engine:Button name="toggle-button" class="toggle-button" />
     </engine:VisualElement>
 </engine:UXML>
