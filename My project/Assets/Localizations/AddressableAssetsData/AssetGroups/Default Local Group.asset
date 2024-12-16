@@ -16,7 +16,12 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 8fb4e630571306c49bc48435485b4b20
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: b2451f314825d2546b277d65b9187452
+    m_Address: Assets/UI/Components/UXMLCounter.uxml
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 452e844b518be844fabb520639b86559, type: 2}
   m_SchemaSet:

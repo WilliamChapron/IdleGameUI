@@ -1,20 +1,51 @@
-using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.UIElements;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.UIElements;
 
-[UxmlElement]
-public partial class Counter : VisualElement
+public class Counter : VisualElement
 {
+    private VisualElement _icon;
+    private Label _count;
+    private Label _unit;
+
+    public Sprite Icon
+    {
+        get => _icon.style.backgroundImage.value.sprite;
+        set => _icon.style.backgroundImage = new StyleBackground(value);
+    }
+
+    public string Count
+    {
+        get => _count.text;
+        set => _count.text = value;
+    }
+
+    public string Unit
+    {
+        get => _unit.text;
+        set => _unit.text = value;
+    }
+
+    //--------------------------------------------------------------------------
+    /* Resolve the link between the UXML template and the Custom Controller. */
+    public Counter()
+    {
+        var visualTree = Addressables.LoadAssetAsync<VisualTreeAsset>("Assets/UI/Components/UXMLCounter.uxml").WaitForCompletion();
+        visualTree.CloneTree(this);
+
+        _icon = this.Q<VisualElement>("icon");
+        _count = this.Q<Label>("count");
+        _unit = this.Q<Label>("unit");
+    }
+
     public new class UxmlFactory : UxmlFactory<Counter, UxmlTraits> { }
 
     public new class UxmlTraits : VisualElement.UxmlTraits
     {
-        UxmlAssetAttributeDescription<Sprite> _icon = new UxmlAssetAttributeDescription<Sprite> { name = "icon-attr" };
-        UxmlStringAttributeDescription _count = new UxmlStringAttributeDescription { name = "count-attr", defaultValue = "000" };
-        UxmlStringAttributeDescription _unit = new UxmlStringAttributeDescription { name = "unit-attr", defaultValue = "" };
+        UxmlAssetAttributeDescription<Sprite> _icon = new() { name = "icon-attr" };
+        UxmlStringAttributeDescription _count = new() { name = "count-attr", defaultValue = "000" };
+        UxmlStringAttributeDescription _unit = new() { name = "unit-attr", defaultValue = "" };
 
         public override IEnumerable<UxmlChildElementDescription> uxmlChildElementsDescription
         {
@@ -26,17 +57,9 @@ public partial class Counter : VisualElement
             base.Init(ve, bag, cc);
             var counter = ve as Counter;
 
-            counter.Clear();
-
-            counter._iconAttr = _icon.GetValueFromBag(bag, cc);
-            counter._counterAttr = _count.GetValueFromBag(bag, cc);
-            counter.Add(new Label("counter") { text = counter._counterAttr });
-            counter._unitAttr = _unit.GetValueFromBag(bag, cc);
-            counter.Add(new Label("unit") { text = counter._unitAttr });
+            counter.Icon = _icon.GetValueFromBag(bag, cc);
+            counter.Count = _count.GetValueFromBag(bag, cc);
+            counter.Unit = _unit.GetValueFromBag(bag, cc);
         }
     }
-
-    public Sprite _iconAttr { get; set; }
-    public string _counterAttr { get; set; }
-    public string _unitAttr { get; set; }
 }

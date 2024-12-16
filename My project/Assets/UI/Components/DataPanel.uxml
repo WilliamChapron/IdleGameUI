@@ -1,9 +1,10 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <engine:Template name="Counter" src="project://database/Assets/UI/Components/Counter.uxml?fileID=9197481963319205126&amp;guid=b2451f314825d2546b277d65b9187452&amp;type=3#Counter" />
+    <engine:Template name="Counter" src="project://database/Assets/UI/Components/UXMLCounter.uxml?fileID=9197481963319205126&amp;guid=b2451f314825d2546b277d65b9187452&amp;type=3#UXMLCounter" />
     <Style src="project://database/Assets/UI/Styles/PanelStyle.uss?fileID=7433441132597879392&amp;guid=d28523a08fdb84e4b918360f5d27fa3a&amp;type=3#PanelStyle" />
     <engine:VisualElement name="container" class="panel-data-container" style="background-color: rgb(70, 49, 49); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgb(82, 57, 57); border-right-color: rgb(82, 57, 57); border-top-color: rgb(82, 57, 57); border-bottom-color: rgb(82, 57, 57); flex-grow: 0; width: auto; align-self: center; padding-top: 6px; padding-right: 6px; padding-bottom: 6px; padding-left: 6px; justify-content: flex-start; align-items: auto; min-height: auto;">
         <engine:Instance template="Counter" name="tulips-counter" />
         <engine:Instance template="Counter" name="coins-counter" class="panel-item" />
         <engine:Instance template="Counter" name="water-counter" />
+        <Counter icon-attr="project://database/Assets/1Sheet/assets_spritesheet_v2_free.png?fileID=546061672881159519&amp;guid=47aff106e3e8c0d448b44ecdc16189a6&amp;type=3#assets_spritesheet_v2_free_34" count-attr="50" unit-attr="K" />
     </engine:VisualElement>
 </engine:UXML>
