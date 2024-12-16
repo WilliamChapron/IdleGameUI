@@ -1,15 +1,28 @@
+using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.UIElements;
+
+enum Settings
+{
+    General,
+    Audio,
+    Graphics,
+    Language
+}
 
 //------------------------------------------------------------------------------
 public class SettingsPage : MonoBehaviour
 {
     //--------------------------------------------------------------------------
     private UIDocument _UI_Document;
-    private VisualElement _generalSettings;
-    private VisualElement _audioSettings;
-    private VisualElement _graphicsSettings;
-    private VisualElement _languageSettings;
+
+    private Settings _activeTabKey;
+
+    private Dictionary<Settings, VisualElement> _tabs = new Dictionary<Settings, VisualElement>();
+    private Dictionary<Settings, Button> _tabButtons = new Dictionary<Settings, Button>();
+
+
 
     //--------------------------------------------------------------------------
     private void Awake()
@@ -17,53 +30,52 @@ public class SettingsPage : MonoBehaviour
         _UI_Document = GetComponent<UIDocument>();
         var root = _UI_Document.rootVisualElement;
 
-        _generalSettings = root.Q("general-settings");
-        _audioSettings = root.Q("audio-settings");
-        _graphicsSettings = root.Q("graphics-settings");
-        _languageSettings = root.Q("language-settings");
+        /* Fetch tabs and buttons */
+        _tabs[Settings.General] = root.Q("general-tab");
+        _tabs[Settings.Audio] = root.Q("audio-tab");
+        _tabs[Settings.Graphics] = root.Q("graphics-tab");
+        _tabs[Settings.Language] = root.Q("language-tab");
+
+        _tabButtons[Settings.General] = root.Q("general-tab-button") as Button;
+        _tabButtons[Settings.Audio] = root.Q("audio-tab-button") as Button;
+        _tabButtons[Settings.Graphics] = root.Q("graphics-tab-button") as Button;
+        _tabButtons[Settings.Language] = root.Q("language-tab-button") as Button;
+
+        /* Make sure all tabs are hidden */
+        foreach (var tab in _tabs)
+        {
+            tab.Value.style.display = DisplayStyle.None;
+        }
     }
 
     //--------------------------------------------------------------------------
     private void OnEnable()
     {
-        var root = _UI_Document.rootVisualElement;
+        foreach (var button in _tabButtons)
+        {
+            button.Value.clicked += () => ShowTab(button.Key);
+        }
 
-        root.Q<Button>("general-tab").clicked +=
-            () => ShowPanel(_generalSettings);
-        root.Q<Button>("audio-tab").clicked +=
-            () => ShowPanel(_audioSettings);
-        root.Q<Button>("graphics-tab").clicked +=
-            () => ShowPanel(_graphicsSettings);
-        root.Q<Button>("language-tab").clicked +=
-            () => ShowPanel(_languageSettings);
-
-        ShowPanel(_generalSettings);
+        ShowTab(Settings.General);
     }
 
     //--------------------------------------------------------------------------
     private void OnDisable()
     {
-        var root = _UI_Document.rootVisualElement;
-
-        root.Q<Button>("general-tab").clicked -=
-            () => ShowPanel(_generalSettings);
-        root.Q<Button>("audio-tab").clicked -=
-            () => ShowPanel(_audioSettings);
-        root.Q<Button>("graphics-tab").clicked -=
-            () => ShowPanel(_graphicsSettings);
-        root.Q<Button>("language-tab").clicked -=
-            () => ShowPanel(_languageSettings);
+        foreach (var button in _tabButtons)
+        {
+            button.Value.clicked -= () => ShowTab(button.Key);
+        }
     }
 
     //--------------------------------------------------------------------------
-    private void ShowPanel(VisualElement panelToShow)
+    private void ShowTab(Settings settingToShow)
     {
-        Debug.Log($"Showing {panelToShow.name}");
-        _generalSettings.style.display = DisplayStyle.None;
-        _audioSettings.style.display = DisplayStyle.None;
-        _graphicsSettings.style.display = DisplayStyle.None;
-        _languageSettings.style.display = DisplayStyle.None;
+        /* Hide current tab */
+        _tabs[_activeTabKey].style.display = DisplayStyle.None;
 
-        panelToShow.style.display = DisplayStyle.Flex;
+        /* Show new tab */
+        _activeTabKey = settingToShow;
+        _tabs[_activeTabKey].style.display = DisplayStyle.Flex;
     }
 }

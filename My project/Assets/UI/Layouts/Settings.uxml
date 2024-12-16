@@ -2,28 +2,28 @@
     <Style src="project://database/Assets/UI/Styles/Settings.uss?fileID=7433441132597879392&amp;guid=67e617f9d90dd884a816b829a8e68b77&amp;type=3#Settings" />
     <ui:VisualElement class="settings-page" style="color: rgb(255, 255, 255);">
         <ui:VisualElement class="tab-bar">
-            <LocalizedButton name="general-tab" text="General" localization-table="SettingsTable" localization-key="generalCN" class="tab-button" />
-            <LocalizedButton name="audio-tab" text="Audio" localization-table="SettingsTable" localization-key="audioCN" class="tab-button" />
-            <LocalizedButton name="graphics-tab" text="Graphics" localization-table="SettingsTable" localization-key="graphicsCN" class="tab-button" />
-            <LocalizedButton name="language-tab" text="Language" localization-table="SettingsTable" localization-key="languageCN" class="tab-button" />
+            <LocalizedButton name="general-tab-button" text="General" localization-table="SettingsTable" localization-key="generalCN" class="tab-button" />
+            <LocalizedButton name="audio-tab-button" text="Audio" localization-table="SettingsTable" localization-key="audioCN" class="tab-button" />
+            <LocalizedButton name="graphics-tab-button" text="Graphics" localization-table="SettingsTable" localization-key="graphicsCN" class="tab-button" />
+            <LocalizedButton name="language-tab-button" text="Language" localization-table="SettingsTable" localization-key="languageCN" class="tab-button" />
         </ui:VisualElement>
         <ui:VisualElement name="content-container" class="content-container">
-            <ui:VisualElement name="general-settings" class="settings-panel">
+            <ui:VisualElement name="general-tab" class="settings-panel">
                 <LocalizedLabel text="General Settings" localization-table="SettingsTable" localization-key="generalSettings" class="panel-header" />
                 <LocalizedToggle name="fullscreen-toggle" text="Fullscreen" localization-table="SettingsTable" localization-key="fullscreen" />
                 <LocalizedToggle name="v-sync-toggle" text="V-Sync" localization-table="SettingsTable" localization-key="vsync" />
             </ui:VisualElement>
-            <ui:VisualElement name="audio-settings" class="settings-panel" style="display: none;">
+            <ui:VisualElement name="audio-tab" class="settings-panel" style="display: none;">
                 <LocalizedLabel text="Audio Settings" localization-table="SettingsTable" localization-key="audioSettings" class="panel-header" />
                 <ui:SliderInt name="volume-slider" low-value="0" high-value="100" value="50" />
                 <LocalizedToggle name="mute-toggle" text="Mute Audio" localization-table="SettingsTable" localization-key="muteAudio" />
             </ui:VisualElement>
-            <ui:VisualElement name="graphics-settings" class="settings-panel" style="display: none;">
+            <ui:VisualElement name="graphics-tab" class="settings-panel" style="display: none;">
                 <LocalizedLabel text="Graphics Settings" localization-table="SettingsTable" localization-key="graphicsSettings" class="panel-header" />
                 <ui:DropdownField name="resolution-dropdown" choices="1920x1080,1280x720,1024x768" />
                 <ui:DropdownField name="quality-dropdown" choices="Low,Medium,High,Ultra" />
             </ui:VisualElement>
-            <ui:VisualElement name="language-settings" class="settings-panel" style="display: none;">
+            <ui:VisualElement name="language-tab" class="settings-panel" style="display: none;">
                 <LocalizedLabel text="Language Settings" localization-table="SettingsTable" localization-key="languageSettings" class="panel-header" />
             </ui:VisualElement>
         </ui:VisualElement>
