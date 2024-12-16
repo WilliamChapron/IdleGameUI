@@ -16,8 +16,10 @@ MonoBehaviour:
   _count: 0
   _productionPerSecond: 0
   _salesPerSecond: 0
-  _sellPrice: 0
+  _sellPrice: 1
   _currency: {fileID: 11400000, guid: 4be77df878a46c14e9bfd870935d9798, type: 2}
-  _demand: 0
-  _priceDemandRatio: 1
+  _productionResourceCost: 6
+  _resource: {fileID: 11400000, guid: aceff7c0127e3434aabdf1c79ad52722, type: 2}
+  _demand: 10
+  _demandPriceRatio: 10
   _demandSalesRatio: 1
