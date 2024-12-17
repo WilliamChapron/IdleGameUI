@@ -287,7 +287,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gold_bg_0: -7480971209822246215
+      gold_bg_1: -1052040611651376650
+      gold_bg_2: -2634831319402149282
+      gold_bg_3: -8644475657583746678
+      gold_bg_4: 5679527940865503832
+      gold_bg_5: 5406287907824148216
+      gold_bg_6: -7070281657439423470
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

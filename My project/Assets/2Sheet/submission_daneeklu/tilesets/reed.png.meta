@@ -215,7 +215,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      reed_0: -8709518492691945334
+      reed_1: 9079530037803798208
+      reed_2: 5653525182941011136
+      reed_3: 2788180372507635309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

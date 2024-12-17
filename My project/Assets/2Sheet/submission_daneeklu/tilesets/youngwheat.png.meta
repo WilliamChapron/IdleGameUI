@@ -167,7 +167,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      youngwheat_0: 6767000920165730704
+      youngwheat_1: -7936056989697317808
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

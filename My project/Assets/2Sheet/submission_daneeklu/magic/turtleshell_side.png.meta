@@ -1079,7 +1079,47 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      turtleshell_side_0: -3206161693760802721
+      turtleshell_side_1: 5962775114696730322
+      turtleshell_side_10: -8352602391618622225
+      turtleshell_side_11: 696225887699408997
+      turtleshell_side_12: 3952493563644926439
+      turtleshell_side_13: -109174252051442640
+      turtleshell_side_14: 3109609982203207073
+      turtleshell_side_15: -3672346869235950863
+      turtleshell_side_16: 4332697231329251947
+      turtleshell_side_17: -349822684300698989
+      turtleshell_side_18: 8753622913972106438
+      turtleshell_side_19: -8915054126658966496
+      turtleshell_side_2: -3422580785871928045
+      turtleshell_side_20: 2964945659978548328
+      turtleshell_side_21: 6853891026790092601
+      turtleshell_side_22: 6687193370964162050
+      turtleshell_side_23: -2262527406826446131
+      turtleshell_side_24: 8808797170584054461
+      turtleshell_side_25: 3779665261836379438
+      turtleshell_side_26: -3445232083155001164
+      turtleshell_side_27: 1277021599845389056
+      turtleshell_side_28: 3738050308341258238
+      turtleshell_side_29: -8104383334518589211
+      turtleshell_side_3: -7777783097846847560
+      turtleshell_side_30: -2429886209516761519
+      turtleshell_side_31: 1024308532797159749
+      turtleshell_side_32: -6321351632154458641
+      turtleshell_side_33: 5102703041167835392
+      turtleshell_side_34: 5828317745030034543
+      turtleshell_side_35: 8412831329691930784
+      turtleshell_side_36: -6516553006603125249
+      turtleshell_side_37: -1395693233636117686
+      turtleshell_side_38: 4546840370672923957
+      turtleshell_side_39: -8511794438138732699
+      turtleshell_side_4: -8215376996880375865
+      turtleshell_side_5: 572975498718636971
+      turtleshell_side_6: 3256197358947620712
+      turtleshell_side_7: 5928967860562939001
+      turtleshell_side_8: 4244510665110481667
+      turtleshell_side_9: -4774172591938855301
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

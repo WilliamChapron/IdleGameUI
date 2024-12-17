@@ -719,7 +719,32 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      magic_firelion_sheet_0: -6657045804327200885
+      magic_firelion_sheet_1: 5545683561365756280
+      magic_firelion_sheet_10: 4544160118864978334
+      magic_firelion_sheet_11: 3489298839301231783
+      magic_firelion_sheet_12: 3012178368104513358
+      magic_firelion_sheet_13: -5450455614964692517
+      magic_firelion_sheet_14: -503017445534010807
+      magic_firelion_sheet_15: -7570841639788514006
+      magic_firelion_sheet_16: -7645728394865602296
+      magic_firelion_sheet_17: 2272397836427899917
+      magic_firelion_sheet_18: 4025025033658021826
+      magic_firelion_sheet_19: 114039233138277987
+      magic_firelion_sheet_2: 3276037697279449403
+      magic_firelion_sheet_20: -2393733164492109888
+      magic_firelion_sheet_21: 473931758676806740
+      magic_firelion_sheet_22: 2804282174618659051
+      magic_firelion_sheet_23: 5465376617659121033
+      magic_firelion_sheet_24: -3640531487060142332
+      magic_firelion_sheet_3: -1116291623315124229
+      magic_firelion_sheet_4: -2387587086430517051
+      magic_firelion_sheet_5: 8283612007637665203
+      magic_firelion_sheet_6: -3446580387584556637
+      magic_firelion_sheet_7: -1628081467535052528
+      magic_firelion_sheet_8: -258098209150412980
+      magic_firelion_sheet_9: 1911859431099684699
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

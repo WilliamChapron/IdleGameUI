@@ -222,7 +222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &97917494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,6 +834,7 @@ GameObject:
   - component: {fileID: 1906691542}
   - component: {fileID: 1906691541}
   - component: {fileID: 1906691543}
+  - component: {fileID: 1906691544}
   m_Layer: 0
   m_Name: MarketplaceMenu
   m_TagString: Untagged
@@ -886,6 +887,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_uiDocument: {fileID: 1906691541}
   handCursorTexture: {fileID: 2800000, guid: 5c0e13e964e4d78409ca6867d9fb9f40, type: 3}
+--- !u!114 &1906691544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906691540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767ca01628a025b43bc3b2d4a15bdb3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_uiDocument: {fileID: 1906691541}
+  bonusItemTemplate: {fileID: 9197481963319205126, guid: 0e5109e3811db084195f6cb82eaf481e, type: 3}
 --- !u!1 &1962562056
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +1009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &7488019207325713490
 MonoBehaviour:
   m_ObjectHideFlags: 0

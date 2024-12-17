@@ -1271,7 +1271,55 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      turtleshell_front_0: 6473930354731733907
+      turtleshell_front_1: -6747861023945404989
+      turtleshell_front_10: 7527453205681512419
+      turtleshell_front_11: -5895496067882111099
+      turtleshell_front_12: 7061525818836541951
+      turtleshell_front_13: 5126706158725541752
+      turtleshell_front_14: -3552988777685980353
+      turtleshell_front_15: 2933382304215254122
+      turtleshell_front_16: 2142547645311464562
+      turtleshell_front_17: -799060912218616671
+      turtleshell_front_18: -5578279285928642396
+      turtleshell_front_19: 156034615731309027
+      turtleshell_front_2: -8461402628200010824
+      turtleshell_front_20: -4781164031543364899
+      turtleshell_front_21: 8266959805493218746
+      turtleshell_front_22: 3782952576227580629
+      turtleshell_front_23: 8814928825914562759
+      turtleshell_front_24: -2059250754281954521
+      turtleshell_front_25: -6137806403613635664
+      turtleshell_front_26: 4200323429578235790
+      turtleshell_front_27: 3284428226042007110
+      turtleshell_front_28: 4611722514674677599
+      turtleshell_front_29: 1626652866539905204
+      turtleshell_front_3: -8634711739391675432
+      turtleshell_front_30: 5286125341195809303
+      turtleshell_front_31: -7431850996846040086
+      turtleshell_front_32: -671427800329894257
+      turtleshell_front_33: -2751259976573146055
+      turtleshell_front_34: -8623074200191890109
+      turtleshell_front_35: -6868144984691537940
+      turtleshell_front_36: -419861832859934084
+      turtleshell_front_37: -481665881720364754
+      turtleshell_front_38: 3985727327089459822
+      turtleshell_front_39: 8775614880867588534
+      turtleshell_front_4: 2145356134667482978
+      turtleshell_front_40: -7063206190854728761
+      turtleshell_front_41: -4504655854808545890
+      turtleshell_front_42: -7181815521454000395
+      turtleshell_front_43: -5881514357047170596
+      turtleshell_front_44: -9172301540616327201
+      turtleshell_front_45: 2539511611671573889
+      turtleshell_front_46: 8491304412191015493
+      turtleshell_front_47: 4346891813032325322
+      turtleshell_front_5: 5821052742082385959
+      turtleshell_front_6: -1894613708207265059
+      turtleshell_front_7: -1250136725346605007
+      turtleshell_front_8: 8262648680305439024
+      turtleshell_front_9: -7837005155189847465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

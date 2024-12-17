@@ -1,0 +1,13 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Templates/BonusItem.uss?fileID=7433441132597879392&amp;guid=c043ca1ebccfa9b4ea022bc1351040b8&amp;type=3#BonusItem" />
+
+    <engine:VisualElement class="bonus-item">
+        <engine:Label name="bonus-name" text="Production X2" class="bonus-name" />
+        <engine:VisualElement class="bonus-image" />
+        <engine:Button class="price-container">
+            <engine:Label name="bonus-price" text="5000" class="bonus-price" />
+            <engine:VisualElement class="currency-unit-icon" />
+        </engine:Button>
+    </engine:VisualElement>
+
+</engine:UXML>

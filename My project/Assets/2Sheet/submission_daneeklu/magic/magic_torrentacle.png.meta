@@ -527,7 +527,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      magic_torrentacle_0: -4150376522201625690
+      magic_torrentacle_1: 4618872382558452322
+      magic_torrentacle_10: -5648052813405114122
+      magic_torrentacle_11: -5495673092203262671
+      magic_torrentacle_12: 2405317654745602606
+      magic_torrentacle_13: 8568323468368852369
+      magic_torrentacle_14: 6057375403743404379
+      magic_torrentacle_15: -2050439602572113261
+      magic_torrentacle_16: -2461310578421112568
+      magic_torrentacle_2: -8522257963191863213
+      magic_torrentacle_3: 7177092207067758235
+      magic_torrentacle_4: 6520815623252563464
+      magic_torrentacle_5: -3756810673420681781
+      magic_torrentacle_6: -5002519466751308206
+      magic_torrentacle_7: 3574350566025979812
+      magic_torrentacle_8: 6122114149641390488
+      magic_torrentacle_9: 3111252174873895390
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

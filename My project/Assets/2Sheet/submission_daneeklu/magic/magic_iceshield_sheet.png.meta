@@ -1199,7 +1199,52 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      magic_iceshield_sheet_0: -51211719640756459
+      magic_iceshield_sheet_1: 8384914089528723899
+      magic_iceshield_sheet_10: 5697770172670061691
+      magic_iceshield_sheet_11: -2164908206805628410
+      magic_iceshield_sheet_12: -1326942214969608760
+      magic_iceshield_sheet_13: -5476179066898178016
+      magic_iceshield_sheet_14: -1222702672101177282
+      magic_iceshield_sheet_15: -1964935367368538076
+      magic_iceshield_sheet_16: -1019863970653008919
+      magic_iceshield_sheet_17: -137027039705762970
+      magic_iceshield_sheet_18: 934127897399720098
+      magic_iceshield_sheet_19: -4749978599941932882
+      magic_iceshield_sheet_2: 7102534503304325795
+      magic_iceshield_sheet_20: -8385189786106903536
+      magic_iceshield_sheet_21: 4646117124223562549
+      magic_iceshield_sheet_22: -5724851375976538051
+      magic_iceshield_sheet_23: -5129791134744089263
+      magic_iceshield_sheet_24: 1396050315806421490
+      magic_iceshield_sheet_25: 3785650103968955812
+      magic_iceshield_sheet_26: -2801795132782435815
+      magic_iceshield_sheet_27: 5865060100950551645
+      magic_iceshield_sheet_28: -1416928313513848150
+      magic_iceshield_sheet_29: 8850013407957727458
+      magic_iceshield_sheet_3: 1258351179898395624
+      magic_iceshield_sheet_30: 7149024191484444458
+      magic_iceshield_sheet_31: -3736749203571619203
+      magic_iceshield_sheet_32: 3181930068640422515
+      magic_iceshield_sheet_33: -4793695846274448132
+      magic_iceshield_sheet_34: -7564095242238622347
+      magic_iceshield_sheet_35: -6116642607453629374
+      magic_iceshield_sheet_36: 1263502217612037647
+      magic_iceshield_sheet_37: 2425587930535498694
+      magic_iceshield_sheet_38: -6455262213923559644
+      magic_iceshield_sheet_39: -8790087158457381759
+      magic_iceshield_sheet_4: -8753189477640178412
+      magic_iceshield_sheet_40: 2812035534949562352
+      magic_iceshield_sheet_41: 613782718523050607
+      magic_iceshield_sheet_42: -556719179803262661
+      magic_iceshield_sheet_43: 7759327611580848000
+      magic_iceshield_sheet_44: -8322837413999919391
+      magic_iceshield_sheet_5: -247476578652664289
+      magic_iceshield_sheet_6: 1696896776335974291
+      magic_iceshield_sheet_7: -295197747714366589
+      magic_iceshield_sheet_8: -4408144388148881328
+      magic_iceshield_sheet_9: -213589286551302253
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -311,7 +311,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tallgrass_0: 3159991131804108224
+      tallgrass_1: 7050245047468457223
+      tallgrass_2: 5453338321343247449
+      tallgrass_3: 7394165384251352522
+      tallgrass_4: -6460990874273479422
+      tallgrass_5: -785272960141387372
+      tallgrass_6: -4997967901719702940
+      tallgrass_7: 100428988064978328
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

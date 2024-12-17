@@ -887,7 +887,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      magic_firelion_big_0: 1731171864151811203
+      magic_firelion_big_1: 4101083731043486269
+      magic_firelion_big_10: -3771374270928822329
+      magic_firelion_big_11: 5547678978719079209
+      magic_firelion_big_12: 6514593062858014195
+      magic_firelion_big_13: 2539728889153248695
+      magic_firelion_big_14: 8070353645623658158
+      magic_firelion_big_15: 6971827243143268191
+      magic_firelion_big_16: -6255628366718053724
+      magic_firelion_big_17: -1472783356347707784
+      magic_firelion_big_18: -8554283799432126245
+      magic_firelion_big_19: -1465523849923421589
+      magic_firelion_big_2: -8814750053682669131
+      magic_firelion_big_20: -4090896168127483156
+      magic_firelion_big_21: 8681984611725189505
+      magic_firelion_big_22: -6704237646347225729
+      magic_firelion_big_23: 3220282973325252090
+      magic_firelion_big_24: 4466421635264061407
+      magic_firelion_big_25: -6614166516062051963
+      magic_firelion_big_26: 4716470285774668041
+      magic_firelion_big_27: -745281085234467568
+      magic_firelion_big_28: -1566763715019283862
+      magic_firelion_big_29: -2638258802789602663
+      magic_firelion_big_3: 6445554894706005809
+      magic_firelion_big_30: 698273838661809963
+      magic_firelion_big_31: -6359383809790232641
+      magic_firelion_big_4: -400665639472698589
+      magic_firelion_big_5: -205626852736925233
+      magic_firelion_big_6: -1168105979864284954
+      magic_firelion_big_7: -7692807429279263550
+      magic_firelion_big_8: 740460721691541004
+      magic_firelion_big_9: -7161781773063487985
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

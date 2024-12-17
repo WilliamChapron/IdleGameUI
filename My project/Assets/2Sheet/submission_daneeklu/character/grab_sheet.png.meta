@@ -407,7 +407,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      grab_sheet_0: 1214826320769773695
+      grab_sheet_1: -8935541782355175865
+      grab_sheet_10: 7544613480303187736
+      grab_sheet_11: 7735704331359676810
+      grab_sheet_2: 7461789669627215806
+      grab_sheet_3: -4582837835223553003
+      grab_sheet_4: 5170922506998789709
+      grab_sheet_5: 3897687938834273466
+      grab_sheet_6: 4924565933749181689
+      grab_sheet_7: 1927286491383062339
+      grab_sheet_8: -666081765413307971
+      grab_sheet_9: 7694617069821735879
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

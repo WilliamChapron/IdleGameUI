@@ -1,0 +1,81 @@
+.bonus-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(158, 217, 156);
+    border: 2px solid rgb(204, 204, 204);
+    border-radius: 12px;
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top-width: 3px;
+    border-right-width: 3px;
+    border-bottom-width: 3px;
+    border-left-width: 3px;
+    border-left-color: rgb(0, 48, 0);
+    border-right-color: rgb(0, 48, 0);
+    border-top-color: rgb(0, 48, 0);
+    border-bottom-color: rgb(0, 48, 0);
+    -unity-font-definition: url("project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&guid=f39766804d4f264409c44e46b6697e49&type=3#Winter Minie");
+    width: 100%;  /* Assure que l'élément occupe toute la largeur du conteneur */
+    height: auto; /* Permet à l'élément de s'adapter à son contenu */
+    padding: 15px;  /* Optionnel, si vous voulez plus d'espacement interne */
+}
+
+.bonus-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.bonus-image {
+    width: 80px;
+    height: 80px;
+    background-image: url("project://database/Assets/UISprite/illustration-of-cute-cozy-greenhouse-for-decorative-flowers-vector-removebg-preview.png?fileID=-1502392104319349625&guid=a3b4d7e1a9e1e2e49a52b568ba6b49f3&type=3#illustration-of-cute-cozy-greenhouse-for-decorative-flowers-vector-removebg-preview_0");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.price-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 48, 0);
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+}
+
+.price-container:hover {
+    scale: 1.05;
+    transition: scale 0.3s ease;
+}
+
+.bonus-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+
+.currency-unit-icon {
+    width: 20px;
+    height: 20px;
+    background-image: url("project://database/Assets/UISprite/icon_pack.png?fileID=-6296036031622572783&guid=a51f3c85d6a1b034bb8792d154d54d4b&type=3#icon_pack_67");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -143,7 +143,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      plowed_soil_0: 4596554697545947059
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
