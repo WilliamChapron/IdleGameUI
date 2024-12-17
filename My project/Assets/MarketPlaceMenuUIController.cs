@@ -117,19 +117,16 @@ public class MarketPlaceMenuUIController : MonoBehaviour
 
             Invoke(nameof(DisableGameObject), 0.7f);
         }
+    }
 
-        void EnableGameObject()
-        {
-            gameObject.SetActive(true);
-        }
+    public void EnableGameObject()
+    {
+        gameObject.SetActive(true);
+    }
 
-        void DisableGameObject()
-        {
-            gameObject.SetActive(false);
-        }
-
-
-
+    public void DisableGameObject()
+    {
+        gameObject.SetActive(false);
     }
 
 }
