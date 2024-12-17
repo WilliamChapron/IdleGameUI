@@ -12,7 +12,7 @@ public class MarketPlaceMenuUIController : MonoBehaviour
     private Button m_category1Button;
     private Button m_category2Button;
 
-    private bool isMarketplaceVisible = false;
+    public bool isMarketplaceVisible = false;
     public VisualElement m_root;
 
     void Start()

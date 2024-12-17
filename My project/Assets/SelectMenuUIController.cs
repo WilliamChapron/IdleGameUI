@@ -17,6 +17,10 @@ public class UIManager : MonoBehaviour
 
     private void OnIcon2Clicked()
     {
-        marketplaceUI.GetComponent<MarketPlaceMenuUIController>().ToggleMarketplace();
+        MarketPlaceMenuUIController marketPlaceMenuUIController = marketplaceUI.GetComponent<MarketPlaceMenuUIController>();
+        if (!marketPlaceMenuUIController.isMarketplaceVisible)
+        {
+            marketPlaceMenuUIController.ToggleMarketplace();
+        }
     }
 }

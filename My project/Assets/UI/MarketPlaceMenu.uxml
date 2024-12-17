@@ -26,10 +26,11 @@
 
 
         <engine:VisualElement name="category2-container" class="category2-container">
+             <engine:Label text="Current Type" name="current-filter-type" class="current-filter-type" />
             <engine:VisualElement class="filter-icons-container">
-                <engine:Button class="filter-icon" style="-unity-background-scale-mode: scale-to-fit;" />
-                <engine:Button class="filter-icon" />
-                <engine:Button class="filter-icon" />
+                <engine:Button class="filter-icon" name="all-type" style="-unity-background-scale-mode: scale-to-fit;" />
+                <engine:Button class="filter-icon" name="factorywide-type" />
+                <engine:Button class="filter-icon" name="global-type" />
             </engine:VisualElement>
             <engine:ScrollView name="bonus-scrollview" class="bonus-scrollview unity-scroll-view--horizontal">
                 <engine:Instance template="BonusItem" style="visibility: visible; display: none;" />
