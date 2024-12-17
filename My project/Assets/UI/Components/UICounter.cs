@@ -43,9 +43,9 @@ public class Counter : VisualElement
 
     public new class UxmlTraits : VisualElement.UxmlTraits
     {
-        UxmlAssetAttributeDescription<Sprite> _icon = new() { name = "icon-attr" };
-        UxmlStringAttributeDescription _count = new() { name = "count-attr", defaultValue = "000" };
-        UxmlStringAttributeDescription _unit = new() { name = "unit-attr", defaultValue = "" };
+        UxmlAssetAttributeDescription<Sprite> _icon = new() { name = "icon" };
+        UxmlStringAttributeDescription _count = new() { name = "count", defaultValue = "000" };
+        UxmlStringAttributeDescription _unit = new() { name = "unit", defaultValue = "" };
 
         public override IEnumerable<UxmlChildElementDescription> uxmlChildElementsDescription
         {

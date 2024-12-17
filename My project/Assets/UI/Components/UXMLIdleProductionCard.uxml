@@ -1,0 +1,26 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/FactoryManage.uss?fileID=7433441132597879392&amp;guid=0f16c282ac7c36f4c85063be5b4069cf&amp;type=3#FactoryManage" />
+    <engine:VisualElement class="factory-box" style="border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgb(0, 119, 0); border-right-color: rgb(0, 119, 0); border-top-color: rgb(0, 119, 0); border-bottom-color: rgb(0, 119, 0); -unity-font-definition: url(&quot;project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&amp;guid=f39766804d4f264409c44e46b6697e49&amp;type=3#Winter Minie&quot;); margin-left: 0; margin-bottom: 0;">
+        <engine:VisualElement class="visual-section">
+            <engine:Image source="path/to/image1.jpg" name="factory-image" class="factory-image" />
+            <engine:VisualElement class="sub-visual-section">
+                <engine:Label text="Factory 1" name="factory-type-label" class="factory-name" />
+                <engine:VisualElement class="factory-count">
+                    <engine:Label text="Factory count :" class="text-label" />
+                    <engine:Label text="5" name="spots-count-label" class="count-label" style="min-height: 32px; -unity-text-align: middle-left;" />
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+        <engine:VisualElement class="management-section" style="flex-shrink: 0; flex-grow: 1; justify-content: space-around;">
+            <engine:VisualElement class="upgrade-data" style="align-items: center; min-height: 20px;">
+                <engine:VisualElement class="upgrade-data-icon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UISprite/icon_pack.png?fileID=-5534719078564965649&amp;guid=a51f3c85d6a1b034bb8792d154d54d4b&amp;type=3#icon_pack_66&quot;);" />
+                <engine:Label text="100" name="production-per-second-label" style="height: 18px; -unity-text-align: middle-left; font-size: 18px;" />
+            </engine:VisualElement>
+            <engine:Button text="100$" name="upgrade-button" class="upgrade-button" />
+            <engine:VisualElement class="upgrade-data" style="min-height: 18px;">
+                <engine:VisualElement class="upgrade-data-icon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/UISprite/icon_pack.png?fileID=-3385375114035940986&amp;guid=a51f3c85d6a1b034bb8792d154d54d4b&amp;type=3#icon_pack_68&quot;);" />
+                <engine:Label text="100" name="production-increment-label" style="min-height: 18px; -unity-text-align: middle-left;" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
