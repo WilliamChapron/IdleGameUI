@@ -11,7 +11,7 @@
     top: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 1px solid rgb(224, 224, 224);
-    max-height: 600px;
+    max-height: 800px;
     overflow: hidden;
     transition: max-height 0.5s ease, padding 0.3s ease, width 0.3s ease;
     opacity: 1;
@@ -77,12 +77,10 @@
 }
 
 .factory-container {
-/*     display:flex;
-    flex-direction:row;
-    justify-content:space-between; */
 }
 
 .factory-box {
+    margin-top: 50px;
     margin-left: 100px;
     display: flex;
     flex-direction: column;
@@ -208,4 +206,106 @@
 
 .price-label:hover {
     scale: 1.1;
+}
+
+.navigation-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.category-button {
+    background-color: rgba(0, 123, 255, 0);
+    color: black;
+    padding: 60px 70px;
+    margin-top: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    -unity-font-definition: url("project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&guid=f39766804d4f264409c44e46b6697e49&type=3#Winter Minie");
+    background-image: url("project://database/Assets/UISprite/green.png?fileID=-6425500650803203713&guid=212a8c1e0f3eeec42a4386622c3e6614&type=3#green_13");
+}
+
+.category-button:hover {
+    scale: 1.1;
+    cursor: link;
+}
+
+.category2-container {
+    left: 50%;
+    translate: -50% 0;
+    width:80%;
+    margin-top: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left-color: rgb(0, 255, 61);
+    border-right-color: rgb(0, 255, 61);
+    border-top-color: rgb(0, 255, 61);
+    border-bottom-color: rgb(0, 255, 61);
+    border-top-width: 10px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 10px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+
+.category2-container .resource-box {
+    left: 50%;
+    translate: -50% 0;
+    border-radius: 8px;
+    background-color: transparent;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.category2-container .resource-image {
+    width: 100px;
+    height: 100px;
+    background-image: url("project://database/Assets/UISprite/water-icon.png?fileID=-417842954049379672&guid=f86b102ce984bdf429308c755993a7ed&type=3#water-icon_0");
+}
+
+.category2-container .resource-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.category2-container .resource-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.category2-container .resource-quantity {
+    font-size: 19px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.category2-container .buy-button {
+    padding: 10px 20px;
+    background-color: rgb(76, 175, 80);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: rgb(69, 160, 73);
 }

@@ -1,9 +1,12 @@
 <UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="UnityEngine.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" schemaLocation="UnityEngine.UIElements ../UIElementsSchema/UnityEngine.UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/FactoryClickMenu.uss?fileID=7433441132597879392&amp;guid=68a2a70ecefa86a4ba820e695e5ff09c&amp;type=3#FactoryClickMenu" />
     <VisualElement name="factory-menu" class="factory-menu">
-        <Label name="factoryNameLabel" text="Nom de l&apos;usine" />
-        <Label name="productivityLabel" text="Productivité: 0" />
-        <Button name="upgradeButton" text="Améliorer" />
-        <Button name="closeButton" text="Fermer" />
+        <Label text="Factory 1" class="title-label" style="color: rgb(0, 0, 0);" />
+        <VisualElement name="productivity-info" class="productivity-info">
+            <Image class="image-icon" style="background-image: url(&quot;project://database/Assets/UISprite/icon_pack.png?fileID=-8502734828280501677&amp;guid=a51f3c85d6a1b034bb8792d154d54d4b&amp;type=3#icon_pack_0&quot;);" />
+            <Label name="productivityLabel" text="Produce/s : 0" class="text-label" style="color: rgb(0, 0, 0);" />
+        </VisualElement>
+        <Button name="upgradeButton" text="Upgrade" class="upgrade-label" style="border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); color: rgb(0, 0, 0);" />
+        <Button name="closeButton" text="Close" class="close-button" style="border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); color: rgb(0, 0, 0);" />
     </VisualElement>
 </UXML>

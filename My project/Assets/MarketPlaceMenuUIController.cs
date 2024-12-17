@@ -1,43 +1,39 @@
 using UnityEngine;
 using UnityEngine.UIElements;
-
 using System.Collections;
-
 
 public class MarketPlaceMenuUIController : MonoBehaviour
 {
-    [SerializeField] UIDocument m_uiDocument;
-    [SerializeField] private Texture2D handCursorTexture; 
+    [SerializeField] private UIDocument m_uiDocument;
+    [SerializeField] private Texture2D handCursorTexture;
 
     private VisualElement m_category1Container;
     private VisualElement m_category2Container;
     private Button m_category1Button;
     private Button m_category2Button;
 
-    private bool isMarketplaceVisible = false; 
+    private bool isMarketplaceVisible = false;
+    public VisualElement m_root;
 
     void Start()
     {
-        var rootVisualElement = m_uiDocument.rootVisualElement;
+        m_root = m_uiDocument.rootVisualElement;
 
-        m_category1Container = rootVisualElement.Q("category1-container");
-        m_category2Container = rootVisualElement.Q("category2-container");
+        m_category1Container = m_root.Q("category1-container");
+        m_category2Container = m_root.Q("category2-container");
 
-        m_category1Button = rootVisualElement.Q<Button>("category1-button");
-        m_category2Button = rootVisualElement.Q<Button>("category2-button");
+        m_category1Button = m_root.Q<Button>("category1-button");
+        m_category2Button = m_root.Q<Button>("category2-button");
 
-
-        var factoryPriceButtonsByClass = rootVisualElement.Query<Button>().Name("factory-price-button").ToList();
+        var factoryPriceButtonsByClass = m_root.Query<Button>().Name("factory-price-button").ToList();
         foreach (var button in factoryPriceButtonsByClass)
         {
             AddCursorCallbacks(button);
         }
 
-        var closeButton = rootVisualElement.Q<Button>("close-button");
-        closeButton.clicked += CloseMenu; 
+        var closeButton = m_root.Q<Button>("close-button");
+        closeButton.clicked += CloseMenu;
         AddCursorCallbacks(closeButton);
-
-
 
         m_category1Container.style.display = DisplayStyle.Flex;
         m_category2Container.style.display = DisplayStyle.None;
@@ -48,10 +44,9 @@ public class MarketPlaceMenuUIController : MonoBehaviour
         AddCursorCallbacks(m_category1Button);
         AddCursorCallbacks(m_category2Button);
 
-
-        // Visible/Hidden logic
-        rootVisualElement.AddToClassList("marketplace-hidden");
-
+        // Initial visibility state
+        m_root.style.opacity = 0; // Set opacity to 1 at the start
+        m_root.style.display = DisplayStyle.None;
     }
 
     void ToggleCategory(int categoryNumber)
@@ -67,7 +62,6 @@ public class MarketPlaceMenuUIController : MonoBehaviour
             m_category2Container.style.display = DisplayStyle.Flex;
         }
     }
-
 
     // Cursor func
     private void AddCursorCallbacks(Button button)
@@ -89,44 +83,63 @@ public class MarketPlaceMenuUIController : MonoBehaviour
     // Close menu
     private void CloseMenu()
     {
-        //m_uiDocument.enabled = false;
         ToggleMarketplace();
+        Debug.LogError("Close menu");
     }
 
-
-    // Visible/Hidden logic
-
+    // Visible/Hidden logic with animation based on opacity
     public void ToggleMarketplace()
     {
-        var root = m_uiDocument.rootVisualElement;
+        if (m_uiDocument == null)
+        {
+            Debug.LogError("UIDocument is not initialized in ToggleMarketplace!");
+            return;
+        }
+
         isMarketplaceVisible = !isMarketplaceVisible;
 
         if (isMarketplaceVisible)
         {
-            Debug.Log("ON");
-            root.RemoveFromClassList("marketplace-hidden");
-            root.AddToClassList("marketplace-visible");
-
-            Invoke(nameof(EnableGameObject), 0.7f);
+            Debug.Log("Marketplace is now visible.");
+            m_root.style.opacity = 0;  
+            m_root.style.display = DisplayStyle.Flex;
+            StartCoroutine(FadeIn());
         }
         else
         {
-            Debug.Log("OFF");
-            root.RemoveFromClassList("marketplace-visible");
-            root.AddToClassList("marketplace-hidden");
-
-            Invoke(nameof(DisableGameObject), 0.7f);
+            Debug.Log("Marketplace is now hidden.");
+            StartCoroutine(FadeOut());
         }
     }
 
-    public void EnableGameObject()
+    // Fade In animation
+    private IEnumerator FadeIn()
     {
-        gameObject.SetActive(true);
+        float duration = 0.7f; 
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            m_root.style.opacity = Mathf.Lerp(0, 1, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        m_root.style.opacity = 1; 
     }
 
-    public void DisableGameObject()
+    // Fade Out animation
+    private IEnumerator FadeOut()
     {
-        gameObject.SetActive(false);
-    }
+        float duration = 0.7f; 
+        float elapsedTime = 0f;
 
+        while (elapsedTime < duration)
+        {
+            m_root.style.opacity = Mathf.Lerp(1, 0, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        m_root.style.opacity = 0; 
+        m_root.style.display = DisplayStyle.None; 
+    }
 }

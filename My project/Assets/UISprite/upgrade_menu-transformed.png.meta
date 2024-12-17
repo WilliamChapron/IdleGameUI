@@ -1,0 +1,703 @@
+fileFormatVersion: 2
+guid: b83b5e704f3c5a04aa86ce28bd97bb5f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5754279604118919522
+    second: upgrade_menu-transformed_0
+  - first:
+      213: 2012241721979728694
+    second: upgrade_menu-transformed_1
+  - first:
+      213: -7083175544361775845
+    second: upgrade_menu-transformed_2
+  - first:
+      213: -5713695044004616884
+    second: upgrade_menu-transformed_3
+  - first:
+      213: 1543584373964916884
+    second: upgrade_menu-transformed_4
+  - first:
+      213: -7654650407121788984
+    second: upgrade_menu-transformed_5
+  - first:
+      213: 2469214506039846656
+    second: upgrade_menu-transformed_6
+  - first:
+      213: 9094587826787980077
+    second: upgrade_menu-transformed_7
+  - first:
+      213: -6456601390752968277
+    second: upgrade_menu-transformed_8
+  - first:
+      213: 1331722675554913173
+    second: upgrade_menu-transformed_9
+  - first:
+      213: 5098917765341500661
+    second: upgrade_menu-transformed_10
+  - first:
+      213: -7015139299027498607
+    second: upgrade_menu-transformed_11
+  - first:
+      213: -3839342885124877706
+    second: upgrade_menu-transformed_12
+  - first:
+      213: -6809005287910291109
+    second: upgrade_menu-transformed_13
+  - first:
+      213: 3966051901669456533
+    second: upgrade_menu-transformed_14
+  - first:
+      213: -6871797671009481835
+    second: upgrade_menu-transformed_15
+  - first:
+      213: -7309193809454199605
+    second: upgrade_menu-transformed_16
+  - first:
+      213: -968269798679116778
+    second: upgrade_menu-transformed_17
+  - first:
+      213: 8018173641317158771
+    second: upgrade_menu-transformed_18
+  - first:
+      213: 2451323713600599542
+    second: upgrade_menu-transformed_19
+  - first:
+      213: 737079887486077745
+    second: upgrade_menu-transformed_20
+  - first:
+      213: 2306790041864634211
+    second: upgrade_menu-transformed_21
+  - first:
+      213: -6021870362582431064
+    second: upgrade_menu-transformed_22
+  - first:
+      213: -1644222805859769532
+    second: upgrade_menu-transformed_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_0
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 2290
+        width: 394
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9667320031b420b0800000000000000
+      internalID: -5754279604118919522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_1
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 2290
+        width: 396
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63372d05f2beceb10800000000000000
+      internalID: 2012241721979728694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_2
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 2290
+        width: 396
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1d0594ee5183bd90800000000000000
+      internalID: -7083175544361775845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_3
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 2290
+        width: 396
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c45e13341a0e4b0b0800000000000000
+      internalID: -5713695044004616884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_4
+      rect:
+        serializedVersion: 2
+        x: 2158
+        y: 2290
+        width: 402
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 498c5035fc9eb6510800000000000000
+      internalID: 1543584373964916884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_5
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 2288
+        width: 398
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cfd4b3c20835c590800000000000000
+      internalID: -7654650407121788984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_6
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 2290
+        width: 396
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0072fb2c289644220800000000000000
+      internalID: 2469214506039846656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_7
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 2290
+        width: 394
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d231a4a7177763e70800000000000000
+      internalID: 9094587826787980077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_8
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1652
+        width: 728
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba150ef5e3b8566a0800000000000000
+      internalID: -6456601390752968277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_9
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 1652
+        width: 520
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b88c7b7ba3b7210800000000000000
+      internalID: 1331722675554913173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_10
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 1652
+        width: 728
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4db1e31bef2c640800000000000000
+      internalID: 5098917765341500661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_11
+      rect:
+        serializedVersion: 2
+        x: 3152
+        y: 1652
+        width: 520
+        height: 528
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 199459fa9f735ae90800000000000000
+      internalID: -7015139299027498607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_12
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 794
+        width: 394
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6725539dcf9e7bac0800000000000000
+      internalID: -3839342885124877706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_13
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 794
+        width: 396
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b59c95c24cd8181a0800000000000000
+      internalID: -6809005287910291109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_14
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 794
+        width: 392
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a35c7013f3a0730800000000000000
+      internalID: 3966051901669456533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_15
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 794
+        width: 394
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b8f133d6872a0a0800000000000000
+      internalID: -6871797671009481835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_16
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 792
+        width: 398
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcc8ff0c4f6809a90800000000000000
+      internalID: -7309193809454199605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_17
+      rect:
+        serializedVersion: 2
+        x: 2586
+        y: 792
+        width: 396
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6140efa8fb30092f0800000000000000
+      internalID: -968269798679116778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_18
+      rect:
+        serializedVersion: 2
+        x: 3014
+        y: 792
+        width: 396
+        height: 556
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f0c16d176464f60800000000000000
+      internalID: 8018173641317158771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_19
+      rect:
+        serializedVersion: 2
+        x: 3440
+        y: 794
+        width: 392
+        height: 554
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f5b7aa0ee9d40220800000000000000
+      internalID: 2451323713600599542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_20
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 156
+        width: 724
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b41b0a042aa3a00800000000000000
+      internalID: 737079887486077745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_21
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 156
+        width: 520
+        height: 524
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36fffb8325d530020800000000000000
+      internalID: 2306790041864634211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_22
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 154
+        width: 728
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa42da7fc40e6ca0800000000000000
+      internalID: -6021870362582431064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: upgrade_menu-transformed_23
+      rect:
+        serializedVersion: 2
+        x: 3152
+        y: 154
+        width: 520
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 443e12dc11c8e29e0800000000000000
+      internalID: -1644222805859769532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

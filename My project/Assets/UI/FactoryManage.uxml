@@ -2,7 +2,13 @@
     <Style src="project://database/Assets/UI/FactoryManage.uss?fileID=7433441132597879392&amp;guid=0f16c282ac7c36f4c85063be5b4069cf&amp;type=3#FactoryManage" />
     <engine:VisualElement name="factory-manage-container" class="factory-manage-container" style="-unity-font-definition: url(&quot;project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&amp;guid=f39766804d4f264409c44e46b6697e49&amp;type=3#Winter Minie&quot;);">
         <engine:VisualElement name="content-container" class="content-container">
-            <engine:ScrollView class="factory-container unity-scroll-view--horizontal">
+
+            <engine:VisualElement name="navigation-buttons" class="navigation-buttons">
+                <engine:Button text="Factories" name="category1-button" class="category-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+                <engine:Button text="Resources" name="category2-button" class="category-button" style="border-left-color: rgb(104, 104, 104); border-right-color: rgb(104, 104, 104); border-top-color: rgb(104, 104, 104); border-bottom-color: rgb(104, 104, 104); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            </engine:VisualElement>
+
+            <engine:ScrollView name="category1-container" class="factory-container unity-scroll-view--horizontal">
                 <engine:VisualElement class="factory-box" style="border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgb(0, 119, 0); border-right-color: rgb(0, 119, 0); border-top-color: rgb(0, 119, 0); border-bottom-color: rgb(0, 119, 0);">
                     <engine:VisualElement class="visual-section">
                         <engine:Image source="path/to/image1.jpg" class="factory-image"/>
@@ -27,6 +33,67 @@
                     </engine:VisualElement>
                 </engine:VisualElement>
             </engine:ScrollView>
+
+
+
+            <engine:ScrollView name="category2-container" class="category2-container">
+
+                <engine:VisualElement class="resource-box">
+                    <engine:Image source="path/to/image1.jpg" class="resource-image"/>
+                    <engine:VisualElement class="resource-info">
+                        <engine:Label text="Water" class="resource-name"/>
+                        <engine:Label text="Quantity: 100L" class="resource-quantity"/>
+                        <engine:Button text="Buy 100L" class="buy-button"/>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+
+                <engine:VisualElement class="resource-box">
+                    <engine:Image source="path/to/image1.jpg" class="resource-image"/>
+                    <engine:VisualElement class="resource-info">
+                        <engine:Label text="Water" class="resource-name"/>
+                        <engine:Label text="Quantity: 100L" class="resource-quantity"/>
+                        <engine:Button text="Buy 100L" class="buy-button"/>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+
+                                <engine:VisualElement class="resource-box">
+                    <engine:Image source="path/to/image1.jpg" class="resource-image"/>
+                    <engine:VisualElement class="resource-info">
+                        <engine:Label text="Water" class="resource-name"/>
+                        <engine:Label text="Quantity: 100L" class="resource-quantity"/>
+                        <engine:Button text="Buy 100L" class="buy-button"/>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+
+                                <engine:VisualElement class="resource-box">
+                    <engine:Image source="path/to/image1.jpg" class="resource-image"/>
+                    <engine:VisualElement class="resource-info">
+                        <engine:Label text="Water" class="resource-name"/>
+                        <engine:Label text="Quantity: 100L" class="resource-quantity"/>
+                        <engine:Button text="Buy 100L" class="buy-button"/>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+
+                                <engine:VisualElement class="resource-box">
+                    <engine:Image source="path/to/image1.jpg" class="resource-image"/>
+                    <engine:VisualElement class="resource-info">
+                        <engine:Label text="Water" class="resource-name"/>
+                        <engine:Label text="Quantity: 100L" class="resource-quantity"/>
+                        <engine:Button text="Buy 100L" class="buy-button"/>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+
+            </engine:ScrollView>
+
+
+
+
+
+
+
+
+
+
         </engine:VisualElement>
         <engine:Button name="toggle-button" class="toggle-button" />
     </engine:VisualElement>
