@@ -1,65 +1,98 @@
 using UnityEngine;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class CameraController : MonoBehaviour
 {
-    public float zoomSpeed = 2f;         // Vitesse de zoom
-    public float minZoom = 5f;           // Zoom minimum
-    public float maxZoom = 20f;          // Zoom maximum
+    public float rotationSpeed = 5.0f;
+    public float baseZoomSpeed = 200.0f;
+    public float minZoom = 5f;
+    public float maxZoom = 200f;
+    public float moveSpeed = 10f;
+    public float targetDistance = 20f;
 
-    private Camera cam;                  // Référence à la caméra
-
-    public float dragSpeed = 0.5f;  // Vitesse de déplacement de la caméra
-    private Vector3 lastMousePosition;  // Dernière position de la souris
-
-    void Start()
-    {
-        // Obtenir la référence à la caméra principale
-        cam = Camera.main;
-    }
+    private Vector3 lastMousePosition;
+    private float currentRotationX = 0f;
+    private float currentRotationY = 0f;
+    private Transform targetObject;
+    private bool isMovingToTarget = false;
 
     void Update()
     {
-        // Déplacement de la caméra avec la souris
-        MoveCamera();
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
 
-        // Zoom avec la molette de la souris
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider.gameObject.CompareTag("GreenHouse"))
+                {
+                    targetObject = hit.transform;
+                    isMovingToTarget = true;
+                }
+            }
+        }
+
+        if (isMovingToTarget && targetObject != null)
+        {
+            MoveCameraToTarget(targetObject.position);
+        }
+
+        RotateCamera();
         ZoomCamera();
     }
 
-    void MoveCamera()
+    void RotateCamera()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(1))
         {
-            // Enregistrer la position de la souris au moment où l'utilisateur clique
-            lastMousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
-        }
+            float deltaX = Input.GetAxis("Mouse X");
+            float deltaY = Input.GetAxis("Mouse Y");
 
-        if (Input.GetMouseButton(0))
-        {
-            // Calculer le mouvement de la souris pendant que le bouton est maintenu enfoncé
-            Vector3 deltaMouse = cam.ScreenToWorldPoint(Input.mousePosition) - lastMousePosition;
+            currentRotationX += deltaX * rotationSpeed;
+            currentRotationY -= deltaY * rotationSpeed;
 
-            // Déplacer la caméra en fonction du mouvement de la souris
-            transform.position -= new Vector3(deltaMouse.x, deltaMouse.y, 0) * dragSpeed;
+            currentRotationY = Mathf.Clamp(currentRotationY, -130f, 130f);
 
-            // Mettre à jour la dernière position de la souris
-            lastMousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+            transform.rotation = Quaternion.Euler(currentRotationY, currentRotationX, 0f);
         }
     }
 
     void ZoomCamera()
     {
-        // Récupérer la molette de la souris pour zoomer
         float scrollInput = Input.GetAxis("Mouse ScrollWheel");
 
-        // Modifier le champ de vision de la caméra en fonction du scroll
         if (scrollInput != 0f)
         {
-            cam.orthographicSize -= scrollInput * zoomSpeed;
+            // Calculer la distance actuelle entre la caméra et le centre
+            float currentDistance = Vector3.Distance(transform.position, Vector3.zero);
 
-            // Limiter les valeurs du zoom
-            cam.orthographicSize = Mathf.Clamp(cam.orthographicSize, minZoom, maxZoom);
+            // Calculer un facteur en fonction de la distance entre la caméra et le centre pour accélérer/lentir le zoom
+            float distanceFactor = Mathf.InverseLerp(minZoom, maxZoom, currentDistance);
+
+            // Calculer la vitesse de zoom ajustée en fonction de ce facteur
+            float adjustedZoomSpeed = baseZoomSpeed * distanceFactor;
+
+            // Appliquer le zoom sur les trois axes en fonction de la direction de la caméra
+            transform.position += transform.forward * scrollInput * adjustedZoomSpeed;
+
+            // Appliquer un clamp uniquement sur l'axe vertical (y)
+            float clampedY = Mathf.Clamp(transform.position.y, minZoom, maxZoom);
+            transform.position = new Vector3(transform.position.x, clampedY, transform.position.z);
+        }
+    }
+
+    void MoveCameraToTarget(Vector3 targetPosition)
+    {
+        Vector3 directionToTarget = targetPosition - transform.position;
+        directionToTarget.Normalize();
+
+        Vector3 targetCameraPosition = targetPosition - directionToTarget * targetDistance;
+
+        transform.position = Vector3.MoveTowards(transform.position, targetCameraPosition, moveSpeed * Time.deltaTime);
+
+        if (Vector3.Distance(transform.position, targetCameraPosition) < 10f)
+        {
+            isMovingToTarget = false;
         }
     }
 }
