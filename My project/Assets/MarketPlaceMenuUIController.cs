@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
+using System.Collections;
+
+
 public class MarketPlaceMenuUIController : MonoBehaviour
 {
     [SerializeField] UIDocument m_uiDocument;
@@ -10,6 +13,8 @@ public class MarketPlaceMenuUIController : MonoBehaviour
     private VisualElement m_category2Container;
     private Button m_category1Button;
     private Button m_category2Button;
+
+    private bool isMarketplaceVisible = false; 
 
     void Start()
     {
@@ -42,6 +47,11 @@ public class MarketPlaceMenuUIController : MonoBehaviour
 
         AddCursorCallbacks(m_category1Button);
         AddCursorCallbacks(m_category2Button);
+
+
+        // Visible/Hidden logic
+        rootVisualElement.AddToClassList("marketplace-hidden");
+
     }
 
     void ToggleCategory(int categoryNumber)
@@ -79,7 +89,47 @@ public class MarketPlaceMenuUIController : MonoBehaviour
     // Close menu
     private void CloseMenu()
     {
-        m_uiDocument.enabled = false;
+        //m_uiDocument.enabled = false;
+        ToggleMarketplace();
+    }
+
+
+    // Visible/Hidden logic
+
+    public void ToggleMarketplace()
+    {
+        var root = m_uiDocument.rootVisualElement;
+        isMarketplaceVisible = !isMarketplaceVisible;
+
+        if (isMarketplaceVisible)
+        {
+            Debug.Log("ON");
+            root.RemoveFromClassList("marketplace-hidden");
+            root.AddToClassList("marketplace-visible");
+
+            Invoke(nameof(EnableGameObject), 0.7f);
+        }
+        else
+        {
+            Debug.Log("OFF");
+            root.RemoveFromClassList("marketplace-visible");
+            root.AddToClassList("marketplace-hidden");
+
+            Invoke(nameof(DisableGameObject), 0.7f);
+        }
+
+        void EnableGameObject()
+        {
+            gameObject.SetActive(true);
+        }
+
+        void DisableGameObject()
+        {
+            gameObject.SetActive(false);
+        }
+
+
+
     }
 
 }

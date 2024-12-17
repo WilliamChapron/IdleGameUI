@@ -840,7 +840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1906691541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,8 +947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdebf33ff3d6ed743b8b7eb27b9ae930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_uiDocument: {fileID: 0}
-  handCursorTexture: {fileID: 0}
+  mainUIDocument: {fileID: 1962562057}
+  marketplaceDocument: {fileID: 1906691541}
 --- !u!4 &2416427078056653049
 Transform:
   m_ObjectHideFlags: 0
@@ -994,7 +994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &7488019207325713490
 MonoBehaviour:
   m_ObjectHideFlags: 0

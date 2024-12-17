@@ -1,40 +1,22 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class SelectMenuUIController : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-    [SerializeField] UIDocument m_uiDocument;
-    [SerializeField] private Texture2D handCursorTexture;
+    [SerializeField] private UIDocument mainUIDocument; 
+    [SerializeField] private GameObject marketplaceUI; 
 
+    private void Start()
+    {
+        var root = mainUIDocument.rootVisualElement;
 
-    //void Start()
-    //{
-    //    var rootVisualElement = m_uiDocument.rootVisualElement;
+        Button button2 = root.Q<Button>("icon2");
 
-        
-    //}
+        button2.clicked += OnIcon2Clicked;
+    }
 
-    //// Cursor func
-    //private void AddCursorCallbacks(Button button)
-    //{
-    //    button.RegisterCallback<MouseEnterEvent>(evt => ActivateCursor());
-    //    button.RegisterCallback<MouseLeaveEvent>(evt => DeactivateCursor());
-    //}
-
-    //private void ActivateCursor()
-    //{
-    //    UnityEngine.Cursor.SetCursor(handCursorTexture, Vector2.zero, CursorMode.Auto);
-    //}
-
-    //private void DeactivateCursor()
-    //{
-    //    UnityEngine.Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-    //}
-
-    //// Close menu
-    //private void CloseMenu()
-    //{
-    //    m_uiDocument.enabled = false;
-    //}
-
+    private void OnIcon2Clicked()
+    {
+        marketplaceUI.GetComponent<MarketPlaceMenuUIController>().ToggleMarketplace();
+    }
 }
