@@ -18,5 +18,12 @@
         <ui:Label name="resource-count" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
         <ui:Label text="Coins" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
         <ui:Label name="coins-count" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Label text="Upgrade" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="upgrade-level" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Button text="Upgrade All" name="upgrade-all-button" style="top: 17px; margin-left: 26px;" />
+        <ui:Label text="UPrice" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="upgrade-price" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Label text="ProdPerSec" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="production-per-second" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
     </ui:VisualElement>
 </ui:UXML>

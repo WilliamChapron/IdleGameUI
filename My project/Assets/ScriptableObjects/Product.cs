@@ -29,6 +29,7 @@ public class Product : ScriptableObject
     private Action<int, int, int> _onSell;
     private Action<int> _onPriceChange;
     private Action<int> _onDemandChange;
+    private Action<int> _onProductionPerSecondChange;
 
     //--------------------------------------------------------------------------
     public int TotalCount
@@ -45,7 +46,7 @@ public class Product : ScriptableObject
 
     public int ProductionPerSecond { 
         get => _productionPerSecond; 
-        set => _productionPerSecond = value; 
+        set { _productionPerSecond = value; _onProductionPerSecondChange?.Invoke(_productionPerSecond); }
     }
     public int SellPrice => _sellPrice;
     public Currency Currency => _currency;
@@ -118,6 +119,17 @@ public class Product : ScriptableObject
     {
         add { _onDemandChange += value; }
         remove { _onDemandChange -= value; }
+    }
+
+    //--------------------------------------------------------------------------
+    /*
+     * @param int: newProductionPerSecond
+     */
+    //--------------------------------------------------------------------------
+    public event Action<int> OnProductionPerSecondChange
+    {
+        add { _onProductionPerSecondChange += value; }
+        remove { _onProductionPerSecondChange -= value; }
     }
 
     //--------------------------------------------------------------------------

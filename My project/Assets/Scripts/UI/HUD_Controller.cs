@@ -12,12 +12,16 @@ public class HUDController : MonoBehaviour
     private Label _spotsCountLabel;
     private Label _resourceCountLabel;
     private Label _coinsCountLabel;
+    private Label _upgradeLevelLabel;
+    private Label _upgradePriceLabel;
+    private Label _productionPerSecondLabel;
 
     private Button _clickerButton;
     private Button _lowerPriceButton;
     private Button _increasePriceButton;
     private Button _buySpotButton;
     private Button _buyResourceButton;
+    private Button _upgradeAllButton;
 
     private ClickLogic _clickLogic;
     private IdleLogic _idleLogic;
@@ -43,57 +47,73 @@ public class HUDController : MonoBehaviour
         _spotsCountLabel = root.Q<Label>("spots-count");
         _resourceCountLabel = root.Q<Label>("resource-count");
         _coinsCountLabel = root.Q<Label>("coins-count");
+        _upgradeLevelLabel = root.Q<Label>("upgrade-level");
+        _upgradePriceLabel = root.Q<Label>("upgrade-price");
+        _productionPerSecondLabel = root.Q<Label>("production-per-second");
 
         _lowerPriceButton = root.Q<Button>("lower-price-button");
         _increasePriceButton = root.Q<Button>("increase-price-button");
         _buySpotButton = root.Q<Button>("buy-spot-button");
         _buyResourceButton = root.Q<Button>("buy-resource-button");
+        _upgradeAllButton = root.Q<Button>("upgrade-all-button");
     }
 
     //--------------------------------------------------------------------------
     private void OnEnable()
     {
-        _clickerButton.clicked += _clickLogic.OnClick;
-        _product.OnCountChange += UpdateProductCount;
-        _product.OnTotalCountChange += UpdateTotalProductCount;
-        _product.OnSellPriceChange += UpdateSellPriceCounter;
-        _product.Resource.OnCountChange += UpdateResourceCounter;
-        _idleLogic.OnNewSpot += UpdateSpotsCounter;
-        _product.Currency.OnCountChange += UpdateCoinsCounter;
+        _product.OnCountChange += OnProductCountChange;
+        _product.OnTotalCountChange += OnTotalProductCountChange;
+        _product.OnSellPriceChange += OnSellPriceChange;
+        _product.Resource.OnCountChange += OnResourceCountChange;
+        _idleLogic.OnNewSpot += OnSpotCountChange;
+        _product.Currency.OnCountChange += OnCoinsCountChange;
 
+        _idleLogic.OnUpgradeAllSpots += OnUpgradeLevelChange;
+        _idleLogic.OnUpgradePriceChange += OnUpgradePriceChange;
+        _product.OnProductionPerSecondChange += OnProductionPerSecondChange;
+
+        _clickerButton.clicked += _clickLogic.OnClick;
         _lowerPriceButton.clicked += () => AdjustPrice(-1);
         _increasePriceButton.clicked += () => AdjustPrice(1);
 
         _buySpotButton.clicked += _idleLogic.BuySpot;
         _buyResourceButton.clicked += () => _product.Resource.Buy(100);
+
+        _upgradeAllButton.clicked += _idleLogic.UpgradeAll;
     }
 
     //--------------------------------------------------------------------------
     private void OnDisable()
     {
         _clickerButton.clicked -= _clickLogic.OnClick;
-        _product.OnCountChange -= UpdateProductCount;
-        _product.OnTotalCountChange -= UpdateTotalProductCount;
-        _product.OnSellPriceChange -= UpdateSellPriceCounter;
-        _product.Resource.OnCountChange -= UpdateResourceCounter;
-        _idleLogic.OnNewSpot -= UpdateSpotsCounter;
-        _product.Currency.OnCountChange -= UpdateCoinsCounter;
+        _product.OnCountChange -= OnProductCountChange;
+        _product.OnTotalCountChange -= OnTotalProductCountChange;
+        _product.OnSellPriceChange -= OnSellPriceChange;
+        _product.Resource.OnCountChange -= OnResourceCountChange;
+        _idleLogic.OnNewSpot -= OnSpotCountChange;
+        _product.Currency.OnCountChange -= OnCoinsCountChange;
+
+        _idleLogic.OnUpgradeAllSpots -= OnUpgradeLevelChange;
+        _idleLogic.OnUpgradePriceChange -= OnUpgradePriceChange;
+        _product.OnProductionPerSecondChange -= OnProductionPerSecondChange;
 
         _lowerPriceButton.clicked -= () => AdjustPrice(-1);
         _increasePriceButton.clicked -= () => AdjustPrice(1);
 
         _buySpotButton.clicked -= _idleLogic.BuySpot;
         _buyResourceButton.clicked -= () => _product.Resource.Buy(100);
+
+        _upgradeAllButton.clicked -= _idleLogic.UpgradeAll;
     }
 
     //--------------------------------------------------------------------------
-    private void UpdateProductCount(int count)
+    private void OnProductCountChange(int count)
     {
         _inStockCountLabel.text = count.ToString();
     }
 
     //--------------------------------------------------------------------------
-    private void UpdateTotalProductCount(int totalCount)
+    private void OnTotalProductCountChange(int totalCount)
     {
         _totalCountLabel.text = totalCount.ToString();
     }
@@ -106,25 +126,25 @@ public class HUDController : MonoBehaviour
     }
 
     //--------------------------------------------------------------------------
-    private void UpdateSellPriceCounter(int sellPrice)
+    private void OnSellPriceChange(int sellPrice)
     {
         _sellPriceLabel.text = sellPrice.ToString();
     }
 
     //--------------------------------------------------------------------------
-    private void UpdateSpotsCounter(int spotsCount)
+    private void OnSpotCountChange(int spotsCount)
     {
         _spotsCountLabel.text = spotsCount.ToString();
     }
 
     //--------------------------------------------------------------------------
-    private void UpdateResourceCounter(int resourceCount)
+    private void OnResourceCountChange(int resourceCount)
     {
         _resourceCountLabel.text = resourceCount.ToString();
     }
 
     //--------------------------------------------------------------------------
-    private void UpdateCoinsCounter(int coinsCount)
+    private void OnCoinsCountChange(int coinsCount)
     {
         _coinsCountLabel.text = coinsCount.ToString();
     }
@@ -133,5 +153,23 @@ public class HUDController : MonoBehaviour
     private void AdjustPrice(int increment)
     {
         _product.AdjustPrice(_product.SellPrice + increment);
+    }
+
+    //--------------------------------------------------------------------------
+    private void OnUpgradeLevelChange(int upgradeLevel, int _)
+    {
+        _upgradeLevelLabel.text = upgradeLevel.ToString();
+    }
+
+    //--------------------------------------------------------------------------
+    private void OnProductionPerSecondChange(int productionPerSecond)
+    {
+        _productionPerSecondLabel.text = productionPerSecond.ToString();
+    }
+
+    //--------------------------------------------------------------------------
+    private void OnUpgradePriceChange(int upgradePrice)
+    {
+        _upgradePriceLabel.text = upgradePrice.ToString();
     }
 }
