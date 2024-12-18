@@ -8,14 +8,14 @@ public class IdleLogic : MonoBehaviour
     //--------------------------------------------------------------------------
     [SerializeField] private Product _product;
 
-    private int _spotsCount = 0;
-    private int _spotProductionPerSecond = 1;
+    private int _plotsCount = 0;
+    private int _plotProductionPerSecond = 1;
     private int _plotPrice = 10;
     private int _upgradeLevel = 0;
     private int _upgradePrice = 10;
 
     private Action<int> _onPlotsCountChange;
-    private Action<int, int> _onUpgradeAllSpots;
+    private Action<int, int> _onUpgradeAllPlots;
     private Action<int> _onUpgradePriceChange;
     private Action<int> _onProductionIncrementChange;
 
@@ -23,8 +23,8 @@ public class IdleLogic : MonoBehaviour
 
     public int PlotsCount
     {
-        get => _spotsCount;
-        set { _spotsCount = value; _onPlotsCountChange?.Invoke(_spotsCount); }
+        get => _plotsCount;
+        set { _plotsCount = value; _onPlotsCountChange?.Invoke(_plotsCount); }
     }
 
     public int UpgradePrice
@@ -38,7 +38,7 @@ public class IdleLogic : MonoBehaviour
 
     //--------------------------------------------------------------------------
         /*
-         * @param int: spotsCount
+         * @param int: plotsCount
          */
         //--------------------------------------------------------------------------
     public event Action<int> OnPlotsCountChange
@@ -53,10 +53,10 @@ public class IdleLogic : MonoBehaviour
      * @param int: upgradeLevel
      */
     //--------------------------------------------------------------------------
-    public event Action<int, int> OnUpgradeAllSpots
+    public event Action<int, int> OnUpgradeAllPlots
     {
-        add { _onUpgradeAllSpots += value; }
-        remove { _onUpgradeAllSpots -= value; }
+        add { _onUpgradeAllPlots += value; }
+        remove { _onUpgradeAllPlots -= value; }
     }
 
     //--------------------------------------------------------------------------
@@ -100,13 +100,13 @@ public class IdleLogic : MonoBehaviour
     }
 
     //--------------------------------------------------------------------------
-    public void BuySpot()
+    public void BuyPlot()
     {
         if (_product.Currency.Count >= _plotPrice)
         {
             _product.Currency.Count -= _plotPrice;
             PlotsCount++;
-            _product.ProductionPerSecond += _spotProductionPerSecond;
+            _product.ProductionPerSecond += _plotProductionPerSecond;
             ComputePlotPrice();
         }
     }
@@ -121,12 +121,12 @@ public class IdleLogic : MonoBehaviour
             ComputeUpgradePrice();
             
             /* Increment the production per second of the product */
-            int oldSpotProductionPerSecond = _spotProductionPerSecond;
-            _spotProductionPerSecond *= 2;
-            int _spotProductionPerSecondIncrement = _spotProductionPerSecond - oldSpotProductionPerSecond;
-            _product.ProductionPerSecond += PlotsCount * _spotProductionPerSecondIncrement;
+            int oldPlotProductionPerSecond = _plotProductionPerSecond;
+            _plotProductionPerSecond *= 2;
+            int _plotProductionPerSecondIncrement = _plotProductionPerSecond - oldPlotProductionPerSecond;
+            _product.ProductionPerSecond += PlotsCount * _plotProductionPerSecondIncrement;
 
-            _onUpgradeAllSpots?.Invoke(_upgradeLevel, _spotProductionPerSecondIncrement);
+            _onUpgradeAllPlots?.Invoke(_upgradeLevel, _plotProductionPerSecondIncrement);
         }
     }
 

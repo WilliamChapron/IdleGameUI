@@ -75,7 +75,7 @@ public class UIIdleProductionCard : VisualElement
     {
         UxmlAssetAttributeDescription<Sprite> _image = new() { name = "image" };
         UxmlStringAttributeDescription _type = new() { name = "type", defaultValue = "Type" };
-        UxmlStringAttributeDescription _spotsCount = new() { name = "spots-count", defaultValue = "5" };
+        UxmlStringAttributeDescription _plotsCount = new() { name = "plots-count", defaultValue = "5" };
         UxmlStringAttributeDescription _productionPerSecond = new() { name = "production-per-second", defaultValue = "20/s" };
         UxmlStringAttributeDescription _productionIncrement = new() { name = "production-increment", defaultValue = "100" };
         UxmlStringAttributeDescription _price = new() { name = "price", defaultValue = "100$" };
@@ -94,7 +94,7 @@ public class UIIdleProductionCard : VisualElement
             card.Image = _image.GetValueFromBag(bag, cc);
             //card.Image = Addressables.LoadAssetAsync<Sprite>("idleProductionTypeImagePlaceholder").WaitForCompletion();
             card.Type = _type.GetValueFromBag(bag, cc);
-            card.PlotsCount = _spotsCount.GetValueFromBag(bag, cc);
+            card.PlotsCount = _plotsCount.GetValueFromBag(bag, cc);
             card.ProductionPerSecond = _productionPerSecond.GetValueFromBag(bag, cc);
             card.ProductionIncrement = _productionIncrement.GetValueFromBag(bag, cc);
             card.Price = _price.GetValueFromBag(bag, cc);

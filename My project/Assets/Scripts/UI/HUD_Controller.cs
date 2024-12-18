@@ -9,7 +9,7 @@ public class HUDController : MonoBehaviour
     private Label _inStockCountLabel;
     private Label _totalCountLabel;
     private Label _sellPriceLabel;
-    private Label _spotsCountLabel;
+    private Label _plotsCountLabel;
     private Label _resourceCountLabel;
     private Label _coinsCountLabel;
     private Label _upgradeLevelLabel;
@@ -19,7 +19,7 @@ public class HUDController : MonoBehaviour
     private Button _clickerButton;
     private Button _lowerPriceButton;
     private Button _increasePriceButton;
-    private Button _buySpotButton;
+    private Button _buyPlotButton;
     private Button _buyResourceButton;
     private Button _upgradeAllButton;
 
@@ -44,7 +44,7 @@ public class HUDController : MonoBehaviour
         _totalCountLabel = root.Q<Label>("total-count");
         _clickerButton = root.Q<Button>("clicker-button");
         _sellPriceLabel = root.Q<Label>("sell-price");
-        _spotsCountLabel = root.Q<Label>("spots-count");
+        _plotsCountLabel = root.Q<Label>("spots-count");
         _resourceCountLabel = root.Q<Label>("resource-count");
         _coinsCountLabel = root.Q<Label>("coins-count");
         _upgradeLevelLabel = root.Q<Label>("upgrade-level");
@@ -53,7 +53,7 @@ public class HUDController : MonoBehaviour
 
         _lowerPriceButton = root.Q<Button>("lower-price-button");
         _increasePriceButton = root.Q<Button>("increase-price-button");
-        _buySpotButton = root.Q<Button>("buy-spot-button");
+        _buyPlotButton = root.Q<Button>("buy-spot-button");
         _buyResourceButton = root.Q<Button>("buy-resource-button");
         _upgradeAllButton = root.Q<Button>("upgrade-all-button");
     }
@@ -65,10 +65,10 @@ public class HUDController : MonoBehaviour
         _product.OnTotalCountChange += OnTotalProductCountChange;
         _product.OnSellPriceChange += OnSellPriceChange;
         _product.Resource.OnCountChange += OnResourceCountChange;
-        _idleLogic.OnPlotsCountChange += OnSpotCountChange;
+        _idleLogic.OnPlotsCountChange += OnPlotsCountChange;
         _product.Currency.OnCountChange += OnCoinsCountChange;
 
-        _idleLogic.OnUpgradeAllSpots += OnUpgradeLevelChange;
+        _idleLogic.OnUpgradeAllPlots += OnUpgradeLevelChange;
         _idleLogic.OnUpgradePriceChange += OnUpgradePriceChange;
         _product.OnProductionPerSecondChange += OnProductionPerSecondChange;
 
@@ -76,7 +76,7 @@ public class HUDController : MonoBehaviour
         _lowerPriceButton.clicked += () => AdjustPrice(-1);
         _increasePriceButton.clicked += () => AdjustPrice(1);
 
-        _buySpotButton.clicked += _idleLogic.BuySpot;
+        _buyPlotButton.clicked += _idleLogic.BuyPlot;
         _buyResourceButton.clicked += () => _product.Resource.Buy(100);
 
         _upgradeAllButton.clicked += _idleLogic.UpgradeAll;
@@ -90,17 +90,17 @@ public class HUDController : MonoBehaviour
         _product.OnTotalCountChange -= OnTotalProductCountChange;
         _product.OnSellPriceChange -= OnSellPriceChange;
         _product.Resource.OnCountChange -= OnResourceCountChange;
-        _idleLogic.OnPlotsCountChange -= OnSpotCountChange;
+        _idleLogic.OnPlotsCountChange -= OnPlotsCountChange;
         _product.Currency.OnCountChange -= OnCoinsCountChange;
 
-        _idleLogic.OnUpgradeAllSpots -= OnUpgradeLevelChange;
+        _idleLogic.OnUpgradeAllPlots -= OnUpgradeLevelChange;
         _idleLogic.OnUpgradePriceChange -= OnUpgradePriceChange;
         _product.OnProductionPerSecondChange -= OnProductionPerSecondChange;
 
         _lowerPriceButton.clicked -= () => AdjustPrice(-1);
         _increasePriceButton.clicked -= () => AdjustPrice(1);
 
-        _buySpotButton.clicked -= _idleLogic.BuySpot;
+        _buyPlotButton.clicked -= _idleLogic.BuyPlot;
         _buyResourceButton.clicked -= () => _product.Resource.Buy(100);
 
         _upgradeAllButton.clicked -= _idleLogic.UpgradeAll;
@@ -132,9 +132,9 @@ public class HUDController : MonoBehaviour
     }
 
     //--------------------------------------------------------------------------
-    private void OnSpotCountChange(int spotsCount)
+    private void OnPlotsCountChange(int plotsCount)
     {
-        _spotsCountLabel.text = spotsCount.ToString();
+        _plotsCountLabel.text = plotsCount.ToString();
     }
 
     //--------------------------------------------------------------------------
