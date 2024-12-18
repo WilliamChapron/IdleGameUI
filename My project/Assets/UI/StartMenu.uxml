@@ -17,5 +17,7 @@
                 <engine:Button name="quit-button" text="Quit" class="menu-button quit-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(149, 149, 149); border-right-color: rgb(149, 149, 149); border-top-color: rgb(149, 149, 149); border-bottom-color: rgb(149, 149, 149);" />
             </engine:VisualElement>
         </engine:VisualElement>
+        <engine:VisualElement class="left-gif" name="left-gif" style="flex-grow: 1;" />
+<!--         <engine:VisualElement class="right-gif" name="right-gif" style="flex-grow: 1;" /> -->
     </engine:VisualElement>
 </engine:UXML>
