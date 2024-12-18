@@ -1,6 +1,8 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/StartMenu.uss?fileID=7433441132597879392&amp;guid=39d9edeac1e717c4f8fa6a25b1dff318&amp;type=3#StartMenu" />
+    <engine:VisualElement name="smoke-effect" class="smoke-effect" />
     <engine:VisualElement name="start-menu-container" class="start-menu-container">
+        <engine:VisualElement class="logo-img" style="background-image: url(&quot;project://database/Assets/UISprite/Gamelogo.png?fileID=8188188906003254983&amp;guid=3ae03194a22e7ac4aa9e25c592835a7c&amp;type=3#Gamelogo_0&quot;); -unity-background-scale-mode: scale-to-fit; margin-top: 100px; width: 15%;" />
         <engine:VisualElement name="button-container" class="button-container" style="background-image: none; -unity-background-scale-mode: stretch-to-fill; background-color: rgba(0, 0, 0, 0);">
             <engine:VisualElement name="play-container" class="button-icon-container play-container">
                 <engine:Image name="play-icon" src="path/to/play-icon.png" class="menu-icon play-icon" style="background-image: url(&quot;project://database/Assets/UISprite/green.png?fileID=9026031593728629356&amp;guid=212a8c1e0f3eeec42a4386622c3e6614&amp;type=3#green_2&quot;);" />

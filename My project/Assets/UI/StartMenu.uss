@@ -1,4 +1,5 @@
 .start-menu-container {
+    position: absolute;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -22,7 +23,7 @@
     padding: 50px 100px 50px 100px;
     flex-direction: column;
     align-items: center;
-    background-color:transparent;
+    background-color: transparent;
 }
 
 .button-icon-container {
@@ -82,4 +83,20 @@
 
 .quit-container:hover {
     background-color: rgb(255, 0, 0);
+}
+
+.logo-img {
+    margin-top: 100px;
+    width: 30%;
+    height: 30%;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.smoke-effect {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url("project://database/Assets/William/VideoTexture/Smoke.renderTexture?fileID=8400000&guid=4998ed122d7509b43be2536b2c2c814a&type=2#Smoke");
+    -unity-background-scale-mode: stretch-to-fill;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.22);
 }
