@@ -17,6 +17,7 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
+        if (GameManager.Instance.isGamePaused) return;
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -89,7 +90,7 @@ public class CameraController : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, targetCameraPosition, moveSpeed * Time.deltaTime);
 
-        if (Vector3.Distance(transform.position, targetCameraPosition) < 10f)
+        if (Vector3.Distance(transform.position, targetCameraPosition) < 50f)
         {
             isMovingToTarget = false;
         }

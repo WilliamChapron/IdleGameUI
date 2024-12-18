@@ -1,20 +1,16 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Select_Menu.uss?fileID=7433441132597879392&amp;guid=7dc4ff0c7e8284248b119b6c2be34cd9&amp;type=3#Select_Menu" />
-    <engine:VisualElement name="select-menu-container" class="select-menu-container">
-
+    <engine:VisualElement name="select-menu-container" class="select-menu-container" style="-unity-background-image-tint-color: rgb(255, 255, 255);">
         <engine:VisualElement name="buttons-container" class="buttons-container">
-
-            <engine:Button name="icon1" class="icon-button">
-                <engine:Image name="icon1-image" src="project://assets/icons/icon1.png" class="icon-image" style="background-image: url(&quot;project://database/Assets/UISprite/icon_pack.png?fileID=-186621478418012376&amp;guid=a51f3c85d6a1b034bb8792d154d54d4b&amp;type=3#icon_pack_11&quot;);" />
+            <engine:Button name="icon1" class="icon-button" style="background-color: rgba(188, 188, 188, 0); border-left-color: rgb(149, 149, 149); border-right-color: rgb(149, 149, 149); border-top-color: rgb(149, 149, 149); border-bottom-color: rgb(149, 149, 149); cursor: initial;">
+                <engine:Image name="icon1-image" src="project://assets/icons/icon1.png" class="icon-image" style="background-image: url(&quot;project://database/Assets/UISprite/icon_pack.png?fileID=-186621478418012376&amp;guid=a51f3c85d6a1b034bb8792d154d54d4b&amp;type=3#icon_pack_11&quot;); background-color: rgba(255, 71, 71, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; -unity-text-align: middle-center;" />
             </engine:Button>
-            <engine:Button name="icon2" class="icon-button">
-                <engine:Image name="icon2-image" src="project://assets/icons/icon2.png" class="icon-image" style="background-image: url(&quot;project://database/Assets/UISprite/icon_pack.png?fileID=582575671881425082&amp;guid=a51f3c85d6a1b034bb8792d154d54d4b&amp;type=3#icon_pack_14&quot;);" />
+            <engine:Button name="icon2" class="icon-button" style="background-color: rgba(188, 188, 188, 0);">
+                <engine:Image name="icon2-image" src="project://assets/icons/icon2.png" class="icon-image" style="background-image: url(&quot;project://database/Assets/UISprite/icon_pack.png?fileID=582575671881425082&amp;guid=a51f3c85d6a1b034bb8792d154d54d4b&amp;type=3#icon_pack_14&quot;); -unity-background-image-tint-color: rgb(255, 255, 255); -unity-background-scale-mode: stretch-to-fill; color: rgb(255, 0, 0);" />
             </engine:Button>
-            <engine:Button name="icon3" class="icon-button">
-                <engine:Image name="icon3-image" src="project://assets/icons/icon3.png" class="icon-image" style="background-image: url(&quot;project://database/Assets/UISprite/icon_pack.png?fileID=-8502734828280501677&amp;guid=a51f3c85d6a1b034bb8792d154d54d4b&amp;type=3#icon_pack_0&quot;);" />
+            <engine:Button name="icon3" class="icon-button" style="background-color: rgba(188, 188, 188, 0);">
+                <engine:Image name="icon3-image" src="project://assets/icons/icon3.png" class="icon-image" style="background-image: url(&quot;project://database/Assets/UISprite/icon_pack.png?fileID=-8502734828280501677&amp;guid=a51f3c85d6a1b034bb8792d154d54d4b&amp;type=3#icon_pack_0&quot;); color: rgba(0, 0, 0, 0); background-color: rgba(255, 255, 255, 0);" />
             </engine:Button>
-
         </engine:VisualElement>
-
     </engine:VisualElement>
 </engine:UXML>

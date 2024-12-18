@@ -1,0 +1,21 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/PauseMenu.uss?fileID=7433441132597879392&amp;guid=20d7c0e6d143a7345a356eebbd1b9c12&amp;type=3#PauseMenu" />
+    <engine:VisualElement name="pause-menu-container" class="pause-menu-container">
+        <engine:Label name="pause-menu-title" text="Pause Menu" class="pause-menu-title" />
+        <engine:VisualElement name="button-container" class="button-container" style="background-image: url(&quot;project://database/Assets/UISprite/green.png?fileID=-4605620265256527585&amp;guid=212a8c1e0f3eeec42a4386622c3e6614&amp;type=3#green_11&quot;); -unity-background-scale-mode: stretch-to-fill;">
+
+            <engine:VisualElement name="resume-container" class="button-icon-container resume-container">
+                <engine:Image name="resume-icon" src="path/to/resume-icon.png" class="menu-icon resume-icon" style="background-image: url(&quot;project://database/Assets/UISprite/green.png?fileID=9026031593728629356&amp;guid=212a8c1e0f3eeec42a4386622c3e6614&amp;type=3#green_2&quot;);" />
+                <engine:Button name="resume-button" text="Resume" class="menu-button resume-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(149, 149, 149); border-right-color: rgb(149, 149, 149); border-top-color: rgb(149, 149, 149); border-bottom-color: rgb(149, 149, 149);" />
+            </engine:VisualElement>
+            <engine:VisualElement name="options-container" class="button-icon-container options-container">
+                <engine:Image name="options-icon" src="path/to/options-icon.png" class="menu-icon options-icon" style="background-image: url(&quot;project://database/Assets/UISprite/green.png?fileID=-9115078658481712775&amp;guid=212a8c1e0f3eeec42a4386622c3e6614&amp;type=3#green_5&quot;);" />
+                <engine:Button name="options-button" text="Options" class="menu-button options-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="quit-container" class="button-icon-container quit-container">
+                <engine:Image name="quit-icon" src="path/to/quit-icon.png" class="menu-icon quit-icon" style="background-image: url(&quot;project://database/Assets/UISprite/green.png?fileID=-6099873399732076034&amp;guid=212a8c1e0f3eeec42a4386622c3e6614&amp;type=3#green_0&quot;);" />
+                <engine:Button name="quit-button" text="Quit" class="menu-button quit-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(149, 149, 149); border-right-color: rgb(149, 149, 149); border-top-color: rgb(149, 149, 149); border-bottom-color: rgb(149, 149, 149);" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
