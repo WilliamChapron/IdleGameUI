@@ -25,7 +25,7 @@ public class AnimatedGIFController : MonoBehaviour
         frameTime = 1f / frameRate;
 
         var root = uiDocument.rootVisualElement;
-        imageElement = root.Q<VisualElement>("AnimatedGIF");
+        imageElement = root.Q<VisualElement>("start-menu-container");
 
         StartCoroutine(AnimateGIF());
     }
