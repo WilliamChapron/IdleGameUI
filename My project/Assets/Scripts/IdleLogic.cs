@@ -10,14 +10,22 @@ public class IdleLogic : MonoBehaviour
 
     private int _spotsCount = 0;
     private int _spotProductionPerSecond = 1;
-    private int _spotPrice = 10;
+    private int _plotPrice = 10;
     private int _upgradeLevel = 0;
     private int _upgradePrice = 10;
 
-    private Action<int> _onNewSpot;
+    private Action<int> _onPlotsCountChange;
     private Action<int, int> _onUpgradeAllSpots;
     private Action<int> _onUpgradePriceChange;
+    private Action<int> _onProductionIncrementChange;
 
+    public Product Product => _product;
+
+    public int PlotsCount
+    {
+        get => _spotsCount;
+        set { _spotsCount = value; _onPlotsCountChange?.Invoke(_spotsCount); }
+    }
 
     public int UpgradePrice
     {
@@ -25,15 +33,18 @@ public class IdleLogic : MonoBehaviour
         set { _upgradePrice = value; _onUpgradePriceChange?.Invoke(_upgradePrice); }
     }
 
+    public int ProductionIncrement => 0;
+
+
     //--------------------------------------------------------------------------
         /*
          * @param int: spotsCount
          */
         //--------------------------------------------------------------------------
-    public event Action<int> OnNewSpot
+    public event Action<int> OnPlotsCountChange
     {
-        add { _onNewSpot += value; }
-        remove { _onNewSpot -= value; }
+        add { _onPlotsCountChange += value; }
+        remove { _onPlotsCountChange -= value; }
     }
 
 
@@ -59,6 +70,17 @@ public class IdleLogic : MonoBehaviour
     }
 
     //--------------------------------------------------------------------------
+    /*
+     * @param int: productionIncrement
+     */
+    //--------------------------------------------------------------------------
+    public event Action<int> OnProductionIncrementChange
+    {
+        add { _onProductionIncrementChange += value; }
+        remove { _onProductionIncrementChange -= value; }
+    }
+
+    //--------------------------------------------------------------------------
     void Start()
     {
         // Workaround to compute the initial salesPerSecond and demand.
@@ -80,13 +102,12 @@ public class IdleLogic : MonoBehaviour
     //--------------------------------------------------------------------------
     public void BuySpot()
     {
-        if (_product.Currency.Count >= _spotPrice)
+        if (_product.Currency.Count >= _plotPrice)
         {
-            _product.Currency.Count -= _spotPrice;
-            _spotsCount++;
+            _product.Currency.Count -= _plotPrice;
+            PlotsCount++;
             _product.ProductionPerSecond += _spotProductionPerSecond;
-            ComputeSpotPrice();
-            _onNewSpot?.Invoke(_spotsCount);
+            ComputePlotPrice();
         }
     }
 
@@ -103,16 +124,16 @@ public class IdleLogic : MonoBehaviour
             int oldSpotProductionPerSecond = _spotProductionPerSecond;
             _spotProductionPerSecond *= 2;
             int _spotProductionPerSecondIncrement = _spotProductionPerSecond - oldSpotProductionPerSecond;
-            _product.ProductionPerSecond += _spotsCount * _spotProductionPerSecondIncrement;
+            _product.ProductionPerSecond += PlotsCount * _spotProductionPerSecondIncrement;
 
             _onUpgradeAllSpots?.Invoke(_upgradeLevel, _spotProductionPerSecondIncrement);
         }
     }
 
     //--------------------------------------------------------------------------
-    private void ComputeSpotPrice()
+    private void ComputePlotPrice()
     {
-        _spotPrice = (int)Mathf.Exp(_spotsCount) + 1;
+        _plotPrice = (int)Mathf.Exp(PlotsCount) + 1;
     }
 
     //--------------------------------------------------------------------------

@@ -8,7 +8,7 @@ public class UIIdleProductionCard : VisualElement
     private VisualElement _image;
     private Button _upgrade;
     private Label _type;
-    private Label _spotsCount;
+    private Label _plotsCount;
     private Label _productionPerSecond;
     private Label _productionIncrement;
 
@@ -24,10 +24,10 @@ public class UIIdleProductionCard : VisualElement
         set => _type.text = value;
     }
 
-    public string SpotsCount
+    public string PlotsCount
     {
-        get => _spotsCount.text;
-        set => _spotsCount.text = value;
+        get => _plotsCount.text;
+        set => _plotsCount.text = value;
     }
 
     public string ProductionPerSecond
@@ -64,7 +64,7 @@ public class UIIdleProductionCard : VisualElement
         _image = this.Q<VisualElement>("factory-image");
         _upgrade = this.Q<Button>("upgrade-button");
         _type = this.Q<Label>("factory-type-label");
-        _spotsCount = this.Q<Label>("spots-count-label");
+        _plotsCount = this.Q<Label>("spots-count-label");
         _productionPerSecond = this.Q<Label>("production-per-second-label");
         _productionIncrement = this.Q<Label>("production-increment-label");
     }
@@ -74,7 +74,7 @@ public class UIIdleProductionCard : VisualElement
     public new class UxmlTraits : VisualElement.UxmlTraits
     {
         UxmlAssetAttributeDescription<Sprite> _image = new() { name = "image" };
-        UxmlStringAttributeDescription _type = new() { name = "type", defaultValue = "Tulip" };
+        UxmlStringAttributeDescription _type = new() { name = "type", defaultValue = "Type" };
         UxmlStringAttributeDescription _spotsCount = new() { name = "spots-count", defaultValue = "5" };
         UxmlStringAttributeDescription _productionPerSecond = new() { name = "production-per-second", defaultValue = "20/s" };
         UxmlStringAttributeDescription _productionIncrement = new() { name = "production-increment", defaultValue = "100" };
@@ -92,11 +92,32 @@ public class UIIdleProductionCard : VisualElement
             var card = ve as UIIdleProductionCard;
 
             card.Image = _image.GetValueFromBag(bag, cc);
+            //card.Image = Addressables.LoadAssetAsync<Sprite>("idleProductionTypeImagePlaceholder").WaitForCompletion();
             card.Type = _type.GetValueFromBag(bag, cc);
-            card.SpotsCount = _spotsCount.GetValueFromBag(bag, cc);
+            card.PlotsCount = _spotsCount.GetValueFromBag(bag, cc);
             card.ProductionPerSecond = _productionPerSecond.GetValueFromBag(bag, cc);
             card.ProductionIncrement = _productionIncrement.GetValueFromBag(bag, cc);
             card.Price = _price.GetValueFromBag(bag, cc);
         }
+    }
+
+    public void OnProductionPerSecondChange(int productionPerSecond)
+    {
+        ProductionPerSecond = productionPerSecond.ToString();
+    }
+
+    public void OnUpgradePriceChange(int price)
+    {
+        Price = price.ToString();
+    }
+
+    public void OnPlotsCountChange(int count)
+    {
+        PlotsCount = count.ToString();
+    }
+
+    public void OnProductionIncrementChange(int increment)
+    {
+        ProductionIncrement = increment.ToString();
     }
 }

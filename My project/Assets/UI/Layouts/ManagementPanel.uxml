@@ -1,0 +1,9 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/FactoryManage.uss?fileID=7433441132597879392&amp;guid=0f16c282ac7c36f4c85063be5b4069cf&amp;type=3#FactoryManage" />
+    <engine:VisualElement name="factory-manage-container" class="factory-manage-container" style="-unity-font-definition: url(&quot;project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&amp;guid=f39766804d4f264409c44e46b6697e49&amp;type=3#Winter Minie&quot;);">
+        <engine:VisualElement name="content-container" class="content-container">
+            <engine:ScrollView name="cards-container" class="factory-container unity-scroll-view--horizontal" />
+        </engine:VisualElement>
+        <engine:Button name="toggle-button" class="toggle-button" />
+    </engine:VisualElement>
+</engine:UXML>

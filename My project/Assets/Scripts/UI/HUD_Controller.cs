@@ -65,7 +65,7 @@ public class HUDController : MonoBehaviour
         _product.OnTotalCountChange += OnTotalProductCountChange;
         _product.OnSellPriceChange += OnSellPriceChange;
         _product.Resource.OnCountChange += OnResourceCountChange;
-        _idleLogic.OnNewSpot += OnSpotCountChange;
+        _idleLogic.OnPlotsCountChange += OnSpotCountChange;
         _product.Currency.OnCountChange += OnCoinsCountChange;
 
         _idleLogic.OnUpgradeAllSpots += OnUpgradeLevelChange;
@@ -90,7 +90,7 @@ public class HUDController : MonoBehaviour
         _product.OnTotalCountChange -= OnTotalProductCountChange;
         _product.OnSellPriceChange -= OnSellPriceChange;
         _product.Resource.OnCountChange -= OnResourceCountChange;
-        _idleLogic.OnNewSpot -= OnSpotCountChange;
+        _idleLogic.OnPlotsCountChange -= OnSpotCountChange;
         _product.Currency.OnCountChange -= OnCoinsCountChange;
 
         _idleLogic.OnUpgradeAllSpots -= OnUpgradeLevelChange;

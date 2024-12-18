@@ -12,7 +12,7 @@ enum Settings
 }
 
 //------------------------------------------------------------------------------
-public class SettingsPage : MonoBehaviour
+public class SettingsController : MonoBehaviour
 {
     //--------------------------------------------------------------------------
     private UIDocument _UI_Document;
