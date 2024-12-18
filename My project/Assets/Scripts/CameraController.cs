@@ -63,19 +63,18 @@ public class CameraController : MonoBehaviour
 
         if (scrollInput != 0f)
         {
-            // Calculer la distance actuelle entre la caméra et le centre
-            float currentDistance = Vector3.Distance(transform.position, Vector3.zero);
 
-            // Calculer un facteur en fonction de la distance entre la caméra et le centre pour accélérer/lentir le zoom
-            float distanceFactor = Mathf.InverseLerp(minZoom, maxZoom, currentDistance);
+            Debug.Log("distance" + transform.position.y);
 
-            // Calculer la vitesse de zoom ajustée en fonction de ce facteur
+            float distanceFactor = Mathf.InverseLerp(minZoom, maxZoom, transform.position.y);
+
             float adjustedZoomSpeed = baseZoomSpeed * distanceFactor;
 
-            // Appliquer le zoom sur les trois axes en fonction de la direction de la caméra
+            Debug.Log(adjustedZoomSpeed);
+
+
             transform.position += transform.forward * scrollInput * adjustedZoomSpeed;
 
-            // Appliquer un clamp uniquement sur l'axe vertical (y)
             float clampedY = Mathf.Clamp(transform.position.y, minZoom, maxZoom);
             transform.position = new Vector3(transform.position.x, clampedY, transform.position.z);
         }

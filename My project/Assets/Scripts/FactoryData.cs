@@ -34,27 +34,24 @@ public class FactoryData : MonoBehaviour
         factories = new List<Factory>();
         factoryDictionary = new Dictionary<int, Factory>();
 
-        // Définir les bornes pour la position aléatoire
-        float x = Random.Range(0f, 500f);
-        float y = Random.Range(0f, 500f);
-        float z = Random.Range(0f, 500f);
-
-        // Créer un vecteur de position aléatoire
-        Vector3 randomPosition = new Vector3(x, y, z);
-
-        // Vérifier si le prefab est assigné
         if (prefab != null)
         {
-            // Instancier le prefab à la position aléatoire
-            Instantiate(prefab, randomPosition, Quaternion.identity);
+            for (int i = 0; i < 20; i++)
+            {
+                float x = Random.Range(0f, 500f);
+                float z = Random.Range(0f, 500f);
+
+                // Position aléatoire avec y fixé à 0
+                Vector3 randomPosition = new Vector3(x, 0, z);
+
+                // Instancier le prefab à la position générée
+                Instantiate(prefab, randomPosition, Quaternion.identity);
+            }
         }
         else
         {
             Debug.LogWarning("Prefab not assigned!");
         }
-
-        return;
-        GenerateRandomFactories(5);
     }
 
     private void Update()
