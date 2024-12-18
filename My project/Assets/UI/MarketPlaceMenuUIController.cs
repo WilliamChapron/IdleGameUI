@@ -19,7 +19,7 @@ public class MarketPlaceMenuUIController : MonoBehaviour
     {
         m_root = m_uiDocument.rootVisualElement;
 
-        m_category1Container = m_root.Q("category1-container");
+        m_category1Container = m_root.Q("idle-production-cards-container");
         m_category2Container = m_root.Q("category2-container");
 
         m_category1Button = m_root.Q<Button>("category1-button");
@@ -45,13 +45,13 @@ public class MarketPlaceMenuUIController : MonoBehaviour
         AddCursorCallbacks(m_category2Button);
 
         // Initial visibility state
-        m_root.style.opacity = 0; // Set opacity to 1 at the start
-        m_root.style.display = DisplayStyle.None;
+        //m_root.style.opacity = 0; // Set opacity to 1 at the start
+        //m_root.style.display = DisplayStyle.None;
     }
 
     void ToggleCategory(int categoryNumber)
     {
-        if (categoryNumber == 1)
+        /*if (categoryNumber == 1)
         {
             m_category1Container.style.display = DisplayStyle.Flex;
             m_category2Container.style.display = DisplayStyle.None;
@@ -60,7 +60,7 @@ public class MarketPlaceMenuUIController : MonoBehaviour
         {
             m_category1Container.style.display = DisplayStyle.None;
             m_category2Container.style.display = DisplayStyle.Flex;
-        }
+        }*/
     }
 
     // Cursor func
@@ -90,7 +90,7 @@ public class MarketPlaceMenuUIController : MonoBehaviour
     // Visible/Hidden logic with animation based on opacity
     public void ToggleMarketplace()
     {
-        if (m_uiDocument == null)
+        /*if (m_uiDocument == null)
         {
             Debug.LogError("UIDocument is not initialized in ToggleMarketplace!");
             return;
@@ -109,7 +109,7 @@ public class MarketPlaceMenuUIController : MonoBehaviour
         {
             Debug.Log("Marketplace is now hidden.");
             StartCoroutine(FadeOut());
-        }
+        }*/
     }
 
     // Fade In animation

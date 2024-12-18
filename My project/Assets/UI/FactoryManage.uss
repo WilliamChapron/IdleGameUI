@@ -24,15 +24,6 @@
     max-height: 60px;
 }
 
-.toggle-button.closed {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    justify-content: center;
-    rotate: 180deg;
-    transition: rotate 0.3s;
-}
-
 .toggle-button {
     width: 70px;
     height: 70px;
@@ -53,6 +44,15 @@
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+    transition: rotate 0.3s;
+}
+
+.toggle-button.closed {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    justify-content: center;
+    rotate: 180deg;
     transition: rotate 0.3s;
 }
 
@@ -107,7 +107,7 @@
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 15px;
-    background-image: url("project://database/Assets/UISprite/illustration-of-cute-cozy-greenhouse-for-decorative-flowers-vector-removebg-preview.png?fileID=-1502392104319349625&guid=a3b4d7e1a9e1e2e49a52b568ba6b49f3&type=3#illustration-of-cute-cozy-greenhouse-for-decorative-flowers-vector-removebg-preview_0");
+    background-image: url("project://database/Assets/UISprite/detailed-greenhouse.png?fileID=-1502392104319349625&guid=a3b4d7e1a9e1e2e49a52b568ba6b49f3&type=3#illustration-of-cute-cozy-greenhouse-for-decorative-flowers-vector-removebg-preview_0");
     -unity-background-scale-mode: scale-to-fit;
 }
 
@@ -125,39 +125,6 @@
     margin-bottom: 5px;
 }
 
-.management-section {
-    align-items: center;
-}
-
-.current-productivity {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.future-productivity {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.icon-label-current {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    background-image: url("project://database/Assets/UISprite/icon_pack.png?fileID=-5534719078564965649&guid=a51f3c85d6a1b034bb8792d154d54d4b&type=3#icon_pack_66");
-}
-
-.icon-label-future {
-    color: green;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    background-image: url("project://database/Assets/UISprite/icon_pack.png?fileID=-3385375114035940986&guid=a51f3c85d6a1b034bb8792d154d54d4b&type=3#icon_pack_68");
-}
-
 .current-productivity .price-label {
     color: red;
 }
@@ -168,11 +135,6 @@
 
 .factory-count .count-label {
     font-size: 32px;
-}
-
-.price-label {
-    font-size: 18px;
-    font-weight: bold;
 }
 
 .improve-price-btn {
@@ -204,8 +166,44 @@
     scale: 1.1;
 }
 
-.price-label:hover {
+.management-section {
+    align-items: center;
+}
+
+.management-section .upgrade-button {
+    background-image: url("project://database/Assets/UISprite/arrow-return.png?fileID=7991434545774952510&guid=c426138ceb935b845a513dccc14d1422&type=3#arrow-return_0");
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border-width: 0;
+    font-size: 24px;
+    margin: 10px 0;
+    padding: 20px 80px;
+    transition: scale 0.3s ease;
+}
+
+.management-section .upgrade-button:hover {
     scale: 1.1;
+    transition: scale 0.15s ease;
+    cursor: url("project://database/Assets/UISprite/cursor.png?fileID=2800000&guid=5c0e13e964e4d78409ca6867d9fb9f40&type=3#cursor");
+}
+
+.upgrade-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 20px;
+}
+
+.upgrade-data > VisualElement {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.upgrade-data > Label {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
 }
 
 .navigation-buttons {
@@ -237,7 +235,7 @@
 .category2-container {
     left: 50%;
     translate: -50% 0;
-    width:80%;
+    width: 80%;
     margin-top: 100px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-left-color: rgb(0, 255, 61);

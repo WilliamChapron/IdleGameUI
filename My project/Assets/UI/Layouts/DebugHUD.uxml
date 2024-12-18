@@ -1,0 +1,29 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/HUD.uss?fileID=7433441132597879392&amp;guid=aba42f110176dd34a8a09a0701c706b4&amp;type=3#HUD" />
+    <ui:VisualElement name="hud" class="hud-container" style="flex-direction: row; align-self: auto; align-items: flex-start; justify-content: flex-start; flex-wrap: wrap;">
+        <ui:Label text="In Stock" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="in-stock-count" text="0" class="counter-label" style="margin-top: 24px; margin-right: 34px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Label text="Total Count:" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="total-count" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Button text="Lower Price" name="lower-price-button" style="top: 17px; margin-left: 56px;" />
+        <ui:Label text="Price:" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="sell-price" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Button text="Increase Price" name="increase-price-button" style="top: 17px;" />
+        <ui:Button text="Buy Spot" name="buy-spot-button" style="top: 17px; margin-left: 26px;" />
+        <ui:Label text="Spots" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="spots-count" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Button name="clicker-button" class="middle-button" style="align-self: center; justify-content: flex-start; position: absolute; top: 50%; left: 50%; right: auto; bottom: auto; translate: -50% -50%;" />
+        <ui:Button text="Buy Water" name="buy-resource-button" style="top: 17px; margin-left: 151px;" />
+        <ui:Label text="Water" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="resource-count" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Label text="Coins" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="coins-count" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Label text="Upgrade" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="upgrade-level" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Button text="Upgrade All" name="upgrade-all-button" style="top: 17px; margin-left: 26px;" />
+        <ui:Label text="UPrice" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="upgrade-price" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+        <ui:Label text="ProdPerSec" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 48px;" />
+        <ui:Label name="production-per-second" text="0" class="counter-label" style="margin-top: 24px; margin-right: 24px; margin-bottom: 24px; margin-left: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

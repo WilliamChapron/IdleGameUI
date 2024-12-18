@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: SettingsTable_fr
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: fr
+  m_SharedData: {fileID: 11400000, guid: 06924516c64539d4ea36d171d05f9557, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 242950066176
+    m_Localized: "G\xE9n\xE9raux"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 673319211008
+    m_Localized: Audio
+    m_Metadata:
+      m_Items: []
+  - m_Id: 805020356608
+    m_Localized: Graphiques
+    m_Metadata:
+      m_Items: []
+  - m_Id: 991482335232
+    m_Localized: "Plein-\xE9cran"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1190426562560
+    m_Localized: V-Sync
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67410555293696
+    m_Localized: "Param\xE8tres Audio"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67693284937728
+    m_Localized: "Param\xE8tres Graphiques"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 68000408653824
+    m_Localized: "Param\xE8tres G\xE9n\xE9raux"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71297479725056
+    m_Localized: Couper le son
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72647240306688
+    m_Localized: "Param\xE8tres de Langue"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72866447216640
+    m_Localized: Langue
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

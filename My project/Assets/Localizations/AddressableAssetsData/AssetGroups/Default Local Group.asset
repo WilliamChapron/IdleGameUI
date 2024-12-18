@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 8fb4e630571306c49bc48435485b4b20
+  m_SerializeEntries:
+  - m_GUID: b2451f314825d2546b277d65b9187452
+    m_Address: Assets/UI/Components/UXMLCounter.uxml
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 26e034ac124a45a438afab5e253bc5b9
+    m_Address: Assets/UI/Components/UXMLUpgradeIdleProductionCard.uxml
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a3b4d7e1a9e1e2e49a52b568ba6b49f3
+    m_Address: idleProductionTypeImagePlaceholder
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1bb838ba5ca41740905d0e61764abbf
+    m_Address: UXMLBuyIdleProductionCard
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 452e844b518be844fabb520639b86559, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f08116a8aeed9e541900b37696624c40, type: 2}
+    - {fileID: 11400000, guid: c049605ef7aba9540aaf9d8d8704bd78, type: 2}

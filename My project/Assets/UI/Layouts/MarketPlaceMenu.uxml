@@ -1,0 +1,27 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:Template name="BonusItem" src="project://database/Assets/UI/Templates/BonusItem.uxml?fileID=9197481963319205126&amp;guid=0e5109e3811db084195f6cb82eaf481e&amp;type=3#BonusItem" />
+    <Style src="project://database/Assets/UI/MarketPlaceMenu.uss?fileID=7433441132597879392&amp;guid=d035765b42e159247b8b70ea4109fd77&amp;type=3#MarketPlaceMenu" />
+    <engine:VisualElement name="marketplace-menu" style="flex-grow: 1; background-color: rgba(9, 7, 15, 0.6); border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
+        <engine:VisualElement name="marketplace-menu-container" style="width: 80%; height: 80%; background-image: url(&quot;project://database/Assets/UISprite/gold_bg.png?fileID=-2634831319402149282&amp;guid=d31cfd38f06862a499e0ee999fcf81dd&amp;type=3#gold_bg_2&quot;); padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; top: 50%; left: 50%; right: auto; bottom: auto; position: absolute; align-items: center; justify-content: center; translate: -50% -50%;">
+            <engine:Button name="close-button" class="close-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            <engine:VisualElement name="navigation-buttons-container" class="navigation-buttons">
+                <engine:Button text="ACHAT" name="category1-button" class="category-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+                <engine:Button text="BONUSES" name="category2-button" class="category-button" style="border-left-color: rgb(104, 104, 104); border-right-color: rgb(104, 104, 104); border-top-color: rgb(104, 104, 104); border-bottom-color: rgb(104, 104, 104); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="content-tabs-container" style="flex-grow: 1; align-self: center; align-items: center; width: 100%;">
+                <engine:VisualElement name="idle-production-cards-container" class="category-container" />
+                <engine:VisualElement name="category2-container" class="category2-container" style="display: none;">
+                    <engine:Label text="Current Type" name="current-filter-type" class="current-filter-type" />
+                    <engine:VisualElement class="filter-icons-container">
+                        <engine:Button name="all-type" class="filter-icon" style="-unity-background-scale-mode: scale-to-fit;" />
+                        <engine:Button name="factorywide-type" class="filter-icon" />
+                        <engine:Button name="global-type" class="filter-icon" />
+                    </engine:VisualElement>
+                    <engine:ScrollView name="bonus-scrollview" class="bonus-scrollview unity-scroll-view--horizontal">
+                        <engine:Instance template="BonusItem" style="visibility: visible; display: none;" />
+                    </engine:ScrollView>
+                </engine:VisualElement>
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
