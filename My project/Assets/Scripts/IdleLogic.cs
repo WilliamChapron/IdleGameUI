@@ -18,6 +18,7 @@ public class IdleLogic : MonoBehaviour
     private Action<int, int> _onUpgradeAllPlots;
     private Action<int> _onUpgradePriceChange;
     private Action<int> _onProductionIncrementChange;
+    private Action<int> _onPlotPriceChange;
 
     public Product Product => _product;
 
@@ -31,6 +32,15 @@ public class IdleLogic : MonoBehaviour
     {
         get => _upgradePrice;
         set { _upgradePrice = value; _onUpgradePriceChange?.Invoke(_upgradePrice); }
+    }
+
+    public int PlotPrice
+    {
+        get => _plotPrice;
+        set { 
+            _plotPrice = value;
+            _onPlotPriceChange?.Invoke(_plotPrice);
+        }
     }
 
     public int ProductionIncrement => 0;
@@ -81,6 +91,17 @@ public class IdleLogic : MonoBehaviour
     }
 
     //--------------------------------------------------------------------------
+    /*
+     * @param int: plotPrice
+     */
+    //--------------------------------------------------------------------------
+    public event Action<int> OnPlotPriceChange
+    {
+        add { _onPlotPriceChange += value; }
+        remove { _onPlotPriceChange -= value; }
+    }
+
+    //--------------------------------------------------------------------------
     void Start()
     {
         // Workaround to compute the initial salesPerSecond and demand.
@@ -102,9 +123,9 @@ public class IdleLogic : MonoBehaviour
     //--------------------------------------------------------------------------
     public void BuyPlot()
     {
-        if (_product.Currency.Count >= _plotPrice)
+        if (_product.Currency.Count >= PlotPrice)
         {
-            _product.Currency.Count -= _plotPrice;
+            _product.Currency.Count -= PlotPrice;
             PlotsCount++;
             _product.ProductionPerSecond += _plotProductionPerSecond;
             ComputePlotPrice();
@@ -133,7 +154,7 @@ public class IdleLogic : MonoBehaviour
     //--------------------------------------------------------------------------
     private void ComputePlotPrice()
     {
-        _plotPrice = (int)Mathf.Exp(PlotsCount) + 1;
+        PlotPrice = (int)Mathf.Exp(PlotsCount) + 1;
     }
 
     //--------------------------------------------------------------------------

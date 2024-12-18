@@ -23,12 +23,17 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 26e034ac124a45a438afab5e253bc5b9
-    m_Address: Assets/UI/Components/UXMLIdleProductionCard.uxml
+    m_Address: Assets/UI/Components/UXMLUpgradeIdleProductionCard.uxml
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a3b4d7e1a9e1e2e49a52b568ba6b49f3
     m_Address: idleProductionTypeImagePlaceholder
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1bb838ba5ca41740905d0e61764abbf
+    m_Address: UXMLBuyIdleProductionCard
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

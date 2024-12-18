@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.UIElements;
 
-public class UIIdleProductionCard : VisualElement
+public class UIUpgradeIdleProductionCard : VisualElement
 {
     private VisualElement _image;
     private Button _upgrade;
@@ -56,9 +56,9 @@ public class UIIdleProductionCard : VisualElement
 
     //--------------------------------------------------------------------------
     /* Resolve the link between the UXML template and the Custom Controller. */
-    public UIIdleProductionCard()
+    public UIUpgradeIdleProductionCard()
     {
-        var visualTree = Addressables.LoadAssetAsync<VisualTreeAsset>("Assets/UI/Components/UXMLIdleProductionCard.uxml").WaitForCompletion();
+        var visualTree = Addressables.LoadAssetAsync<VisualTreeAsset>("Assets/UI/Components/UXMLUpgradeIdleProductionCard.uxml").WaitForCompletion();
         visualTree.CloneTree(this);
 
         _image = this.Q<VisualElement>("factory-image");
@@ -69,7 +69,7 @@ public class UIIdleProductionCard : VisualElement
         _productionIncrement = this.Q<Label>("production-increment-label");
     }
 
-    public new class UxmlFactory : UxmlFactory<UIIdleProductionCard, UxmlTraits> { }
+    public new class UxmlFactory : UxmlFactory<UIUpgradeIdleProductionCard, UxmlTraits> { }
 
     public new class UxmlTraits : VisualElement.UxmlTraits
     {
@@ -89,7 +89,7 @@ public class UIIdleProductionCard : VisualElement
         public override void Init(VisualElement ve, IUxmlAttributes bag, CreationContext cc)
         {
             base.Init(ve, bag, cc);
-            var card = ve as UIIdleProductionCard;
+            var card = ve as UIUpgradeIdleProductionCard;
 
             card.Image = _image.GetValueFromBag(bag, cc);
             //card.Image = Addressables.LoadAssetAsync<Sprite>("idleProductionTypeImagePlaceholder").WaitForCompletion();

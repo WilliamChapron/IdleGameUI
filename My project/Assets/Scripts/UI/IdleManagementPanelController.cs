@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -6,7 +5,7 @@ using UnityEngine.UIElements;
 public class IdleManagementPanelController : MonoBehaviour
 {
     [SerializeField] List<IdleLogic> _idleLogics = new List<IdleLogic>();
-    List<UIIdleProductionCard> _cards = new List<UIIdleProductionCard>();
+    List<UIUpgradeIdleProductionCard> _cards = new List<UIUpgradeIdleProductionCard>();
 
     private UIDocument _UI_Document;
 
@@ -15,11 +14,11 @@ public class IdleManagementPanelController : MonoBehaviour
         _UI_Document = GetComponent<UIDocument>();
         var root = _UI_Document.rootVisualElement;
 
-        var cardsContainer = root.Q<VisualElement>("cards-container");
+        var cardsContainer = root.Q<VisualElement>("idle-production-cards-container");
 
         foreach (var _idleLogic in _idleLogics)
         {
-            var card = new UIIdleProductionCard();
+            var card = new UIUpgradeIdleProductionCard();
             card.Type = _idleLogic.Product.name;
             card.ProductionPerSecond = _idleLogic.Product.ProductionPerSecond.ToString();
             card.ProductionIncrement = _idleLogic.ProductionIncrement.ToString();
