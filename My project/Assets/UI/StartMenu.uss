@@ -1,0 +1,89 @@
+.start-menu-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+/*     -unity-font-definition: url("project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&guid=f39766804d4f264409c44e46b6697e49&type=3#Winter Minie");
+    -unity-font-style: normal;
+    background-image: url("project://database/Assets/UI/blur%20(1).jpg?fileID=2001016504737798230&guid=adb59efd92439cd4e9809791501f04b3&type=3#blur (1)_0");
+    background-color: rgba(0, 0, 0, 0);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.81); */
+}
+
+.start-menu-title {
+    bottom: 5%;
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button-container {
+    bottom: 5%;
+    width: auto;
+    height: auto;
+    padding: 50px 100px 50px 100px;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("project://database/Assets/UISprite/green.png?fileID=-4605620265256527585&guid=212a8c1e0f3eeec42a4386622c3e6614&type=3#green_11");
+}
+
+.button-icon-container {
+    width: 250px;
+    background-color: rgb(30, 30, 30);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center;
+}
+
+.menu-icon {
+    width: 32px;
+    height: 32px;
+    margin: 10px;
+}
+
+.menu-button {
+    background-color: transparent;
+    font-size: 18px;
+    color: white;
+}
+
+.button-icon-container {
+    margin-top: 10px;
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: white;
+    border-bottom-color: white;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-style: solid;
+}
+
+.button-icon-container:hover {
+    border-left-color: white;
+    border-right-color: white;
+    border-top-color: white;
+    border-bottom-color: white;
+    border-top-width: 2px;
+    border-right-width: 2px;
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-style: solid;
+}
+
+.play-container:hover {
+    background-color: rgb(0, 255, 0);
+}
+
+.options-container:hover {
+    background-color: rgb(255, 204, 0);
+}
+
+.quit-container:hover {
+    background-color: rgb(255, 0, 0);
+}

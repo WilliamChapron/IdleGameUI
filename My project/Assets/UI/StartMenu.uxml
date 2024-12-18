@@ -1,0 +1,24 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/StartMenu.uss?fileID=7433441132597879392&amp;guid=39d9edeac1e717c4f8fa6a25b1dff318&amp;type=3#StartMenu" />
+    <engine:VisualElement name="AnimatedGIF" style="flex-grow: 1; -unity-font-definition: url(&quot;project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&amp;guid=f39766804d4f264409c44e46b6697e49&amp;type=3#Winter Minie&quot;); background-image: url(&quot;project://database/Assets/UISprite/michael-shapoval-main-menu-gif.gif?fileID=2800000&amp;guid=94b55196c7464a34aaaa256038141ade&amp;type=3#michael-shapoval-main-menu-gif&quot;); -unity-background-scale-mode: stretch-to-fill;" />
+
+
+    <!-- <engine:VisualElement name="start-menu-container" class="start-menu-container">
+        <engine:Label name="start-menu-title" text="Start Menu" class="start-menu-title" />
+        <engine:VisualElement name="button-container" class="button-container" style="background-image: url(&quot;project://database/Assets/UISprite/green.png?fileID=-4605620265256527585&amp;guid=212a8c1e0f3eeec42a4386622c3e6614&amp;type=3#green_11&quot;); -unity-background-scale-mode: stretch-to-fill;">
+
+            <engine:VisualElement name="play-container" class="button-icon-container play-container">
+                <engine:Image name="play-icon" src="path/to/play-icon.png" class="menu-icon play-icon" style="background-image: url(&quot;project://database/Assets/UISprite/green.png?fileID=9026031593728629356&amp;guid=212a8c1e0f3eeec42a4386622c3e6614&amp;type=3#green_2&quot;);" />
+                <engine:Button name="play-button" text="Play" class="menu-button play-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(149, 149, 149); border-right-color: rgb(149, 149, 149); border-top-color: rgb(149, 149, 149); border-bottom-color: rgb(149, 149, 149);" />
+            </engine:VisualElement>
+            <engine:VisualElement name="options-container" class="button-icon-container options-container">
+                <engine:Image name="options-icon" src="path/to/options-icon.png" class="menu-icon options-icon" style="background-image: url(&quot;project://database/Assets/UISprite/green.png?fileID=-9115078658481712775&amp;guid=212a8c1e0f3eeec42a4386622c3e6614&amp;type=3#green_5&quot;);" />
+                <engine:Button name="options-button" text="Options" class="menu-button options-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            </engine:VisualElement>
+            <engine:VisualElement name="quit-container" class="button-icon-container quit-container">
+                <engine:Image name="quit-icon" src="path/to/quit-icon.png" class="menu-icon quit-icon" style="background-image: url(&quot;project://database/Assets/UISprite/green.png?fileID=-6099873399732076034&amp;guid=212a8c1e0f3eeec42a4386622c3e6614&amp;type=3#green_0&quot;);" />
+                <engine:Button name="quit-button" text="Quit" class="menu-button quit-button" style="border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(149, 149, 149); border-right-color: rgb(149, 149, 149); border-top-color: rgb(149, 149, 149); border-bottom-color: rgb(149, 149, 149);" />
+            </engine:VisualElement>
+        </engine:VisualElement>
+    </engine:VisualElement> -->
+</engine:UXML>
