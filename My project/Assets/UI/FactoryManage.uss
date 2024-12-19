@@ -1,7 +1,8 @@
 .factory-manage-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;  /* Centrage horizontal */
+    justify-content: center; /* Centrage vertical */
     padding: 20px;
     border-radius: 10px;
     width: 50%;
@@ -11,25 +12,18 @@
     top: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border: 1px solid rgb(224, 224, 224);
-    max-height: 800px;
+    max-height: 70%;
     overflow: hidden;
     transition: max-height 0.5s ease, padding 0.3s ease, width 0.3s ease;
     opacity: 1;
     background-color: rgb(35, 54, 48);
 }
 
-.factory-manage-container.closed {
-    width: 10%;
-    padding: 0;
-    max-height: 60px;
-}
-
 .toggle-button {
     width: 70px;
     height: 70px;
-    background-size: contain;
-    background-color: rgba(0, 123, 255, 0);
-    color: rgb(255, 255, 255);
+    margin-top:20px;
+    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -45,18 +39,25 @@
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
     transition: rotate 0.3s;
+    display: flex; 
+    justify-content: center;  
+    align-items: center;  
 }
 
+
+
 .toggle-button.closed {
-    width: 100%;
-    height: 100%;
+    margin: 20px;
     padding: 20px;
     justify-content: center;
     rotate: 180deg;
     transition: rotate 0.3s;
 }
 
-.toggle-button:hover {
+.factory-manage-container.closed {
+    width: 8%;
+    height:10%;
+    padding: 0;
 }
 
 .content-container {
@@ -72,21 +73,22 @@
 
 .factory-manage-container.closed .content-container {
     opacity: 0;
-    height: 0;
+    height: 10px;
     overflow: hidden;
 }
 
-.factory-container {
+.category1-container {
 }
 
 .factory-box {
-    margin-top: 50px;
-    margin-left: 100px;
+    margin-top: 5%;
+    margin-left: 5%;
+    height: auto;
+    width: auto;
     display: flex;
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    width: 300px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 15px;
     margin-bottom: 20px;
@@ -123,6 +125,38 @@
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 5px;
+}
+
+.current-productivity {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.future-productivity {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.factory-count {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.price-label {
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .current-productivity .price-label {
@@ -187,25 +221,6 @@
     cursor: url("project://database/Assets/UISprite/cursor.png?fileID=2800000&guid=5c0e13e964e4d78409ca6867d9fb9f40&type=3#cursor");
 }
 
-.upgrade-data {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    min-height: 20px;
-}
-
-.upgrade-data > VisualElement {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-.upgrade-data > Label {
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-}
-
 .navigation-buttons {
     display: flex;
     flex-direction: row;
@@ -215,7 +230,7 @@
 .category-button {
     background-color: rgba(0, 123, 255, 0);
     color: black;
-    padding: 60px 70px;
+    padding: 45px 50px;
     margin-top: 20px;
     border-radius: 8px;
     font-weight: bold;
@@ -229,7 +244,6 @@
 
 .category-button:hover {
     scale: 1.1;
-    cursor: link;
 }
 
 .category2-container {
@@ -237,66 +251,68 @@
     translate: -50% 0;
     width: 80%;
     margin-top: 100px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-left-color: rgb(0, 255, 61);
-    border-right-color: rgb(0, 255, 61);
-    border-top-color: rgb(0, 255, 61);
-    border-bottom-color: rgb(0, 255, 61);
-    border-top-width: 10px;
-    border-right-width: 10px;
-    border-bottom-width: 10px;
-    border-left-width: 10px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    border-bottom-right-radius: 9px;
-    border-bottom-left-radius: 9px;
+    flex-wrap: wrap;
+}
+
+.category2-container .background {
+    width: 100%;
+    height: 100%;
+}
+
+.category2-container .grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .category2-container .resource-box {
-    left: 50%;
-    translate: -50% 0;
+    margin-left: auto; margin-right: auto;
+    margin-top: 20px;
+    background-color: white;
     border-radius: 8px;
-    background-color: transparent;
     padding: 20px;
-    width: 70%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
+    flex-direction:row;
     align-items: center;
-    flex-direction: row;
+    border-width: 5px;
+    border-color: rgb(0, 119, 0);
+    border-style: solid;
+}
+
+.category2-container .resource-box * {
+    color: black;
 }
 
 .category2-container .resource-image {
     width: 100px;
     height: 100px;
     background-image: url("project://database/Assets/UISprite/water-icon.png?fileID=-417842954049379672&guid=f86b102ce984bdf429308c755993a7ed&type=3#water-icon_0");
+    background-size: contain;
+    background-position: center;
+    border-radius: 8px;
 }
 
 .category2-container .resource-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: row;
+    margin-left: 20px;
 }
 
 .category2-container .resource-name {
     font-size: 24px;
     font-weight: bold;
-    color: white;
-    margin-bottom: 10px;
+    margin-bottom: 5px; 
 }
 
 .category2-container .resource-quantity {
     font-size: 19px;
-    color: white;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .category2-container .buy-button {
     padding: 10px 20px;
     background-color: rgb(76, 175, 80);
-    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;

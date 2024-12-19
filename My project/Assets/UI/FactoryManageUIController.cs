@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class FactoryManageUIController : MonoBehaviour
 {
-    [SerializeField] private UIDocument uIDocument; // Référence au UIDocument
+    [SerializeField] private UIDocument uIDocument; 
 
     private VisualElement _generalDataContainer;
     private Button _toggleButton;

@@ -1,11 +1,19 @@
 .start-menu-container {
-    position: absolute;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
     -unity-font-definition: url("project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&guid=f39766804d4f264409c44e46b6697e49&type=3#Winter Minie");
+    cursor: url("project://database/Assets/UISprite/main_cursor%20(1).png?fileID=2800000&guid=f6f507e76ebdc474c860ccccc10d2032&type=3#main_cursor (1)");
+}
+
+:root {
+    cursor: url("project://database/Assets/UISprite/main_cursor%20(1).png?fileID=2800000&guid=f6f507e76ebdc474c860ccccc10d2032&type=3#main_cursor (1)");
+}
+
+.start-menu-container * {
+    cursor: url("project://database/Assets/UISprite/main_cursor%20(1).png?fileID=2800000&guid=f6f507e76ebdc474c860ccccc10d2032&type=3#main_cursor (1)");
 }
 
 .start-menu-title {
@@ -93,7 +101,8 @@
 }
 
 .smoke-effect {
-    display: none;
+    display:none;
+    position: absolute;
     width: 100%;
     height: 100%;
     background-image: url("project://database/Assets/William/VideoTexture/Smoke.renderTexture?fileID=8400000&guid=4998ed122d7509b43be2536b2c2c814a&type=2#Smoke");
@@ -102,15 +111,15 @@
 }
 
 .left-gif {
-    position:absolute;
-    left:70%;
-    width:200px;
-    height:400px;
+    position: absolute;
+    left: 70%;
+    width: 200px;
+    height: 400px;
 }
 
 .right-gif {
-    position:absolute;
-    left:80%;
-    width:200px;
-    height:400px;
+    position: absolute;
+    left: 80%;
+    width: 200px;
+    height: 400px;
 }
