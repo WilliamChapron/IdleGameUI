@@ -249,7 +249,7 @@
 .category2-container {
     left: 50%;
     translate: -50% 0;
-    width: 80%;
+    width: 90%;
     margin-top: 100px;
     flex-wrap: wrap;
 }
@@ -260,6 +260,7 @@
 }
 
 .category2-container .grid {
+    margin:10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

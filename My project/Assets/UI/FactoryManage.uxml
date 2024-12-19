@@ -7,6 +7,124 @@
                 <engine:Button text="Resources" name="category2-button" class="category-button" style="border-left-color: rgb(104, 104, 104); border-right-color: rgb(104, 104, 104); border-top-color: rgb(104, 104, 104); border-bottom-color: rgb(104, 104, 104); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
             </engine:VisualElement>
 
+            <engine:ScrollView name="category1-container" class="category1-container unity-scroll-view--horizontal">
+                <engine:VisualElement class="factory-box" style="border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgb(0, 119, 0); border-right-color: rgb(0, 119, 0); border-top-color: rgb(0, 119, 0); border-bottom-color: rgb(0, 119, 0);">
+                    <engine:VisualElement class="visual-section">
+                        <engine:Image source="path/to/image1.jpg" class="factory-image" />
+                        <engine:VisualElement class="sub-visual-section">
+                            <engine:Label text="Factory 1" class="factory-name" />
+                            <engine:VisualElement class="factory-count">
+                                <engine:Label text="Factory count :" class="text-label" />
+                                <engine:Label text="5" class="count-label" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement class="management-section">
+                        <engine:VisualElement class="current-productivity">
+                            <engine:Label class="icon-label-current" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
+                        <engine:Button text="100$" class="improve-price-btn" />
+                        <engine:VisualElement class="future-productivity">
+                            <engine:Label class="icon-label-future" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                <engine:VisualElement class="factory-box" style="border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgb(0, 119, 0); border-right-color: rgb(0, 119, 0); border-top-color: rgb(0, 119, 0); border-bottom-color: rgb(0, 119, 0);">
+                    <engine:VisualElement class="visual-section">
+                        <engine:Image source="path/to/image1.jpg" class="factory-image" />
+                        <engine:VisualElement class="sub-visual-section">
+                            <engine:Label text="Factory 1" class="factory-name" />
+                            <engine:VisualElement class="factory-count">
+                                <engine:Label text="Factory count :" class="text-label" />
+                                <engine:Label text="5" class="count-label" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement class="management-section">
+                        <engine:VisualElement class="current-productivity">
+                            <engine:Label class="icon-label-current" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
+                        <engine:Button text="100$" class="improve-price-btn" />
+                        <engine:VisualElement class="future-productivity">
+                            <engine:Label class="icon-label-future" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                <engine:VisualElement class="factory-box" style="border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgb(0, 119, 0); border-right-color: rgb(0, 119, 0); border-top-color: rgb(0, 119, 0); border-bottom-color: rgb(0, 119, 0);">
+                    <engine:VisualElement class="visual-section">
+                        <engine:Image source="path/to/image1.jpg" class="factory-image" />
+                        <engine:VisualElement class="sub-visual-section">
+                            <engine:Label text="Factory 1" class="factory-name" />
+                            <engine:VisualElement class="factory-count">
+                                <engine:Label text="Factory count :" class="text-label" />
+                                <engine:Label text="5" class="count-label" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement class="management-section">
+                        <engine:VisualElement class="current-productivity">
+                            <engine:Label class="icon-label-current" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
+                        <engine:Button text="100$" class="improve-price-btn" />
+                        <engine:VisualElement class="future-productivity">
+                            <engine:Label class="icon-label-future" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                <engine:VisualElement class="factory-box" style="border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgb(0, 119, 0); border-right-color: rgb(0, 119, 0); border-top-color: rgb(0, 119, 0); border-bottom-color: rgb(0, 119, 0);">
+                    <engine:VisualElement class="visual-section">
+                        <engine:Image source="path/to/image1.jpg" class="factory-image" />
+                        <engine:VisualElement class="sub-visual-section">
+                            <engine:Label text="Factory 1" class="factory-name" />
+                            <engine:VisualElement class="factory-count">
+                                <engine:Label text="Factory count :" class="text-label" />
+                                <engine:Label text="5" class="count-label" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement class="management-section">
+                        <engine:VisualElement class="current-productivity">
+                            <engine:Label class="icon-label-current" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
+                        <engine:Button text="100$" class="improve-price-btn" />
+                        <engine:VisualElement class="future-productivity">
+                            <engine:Label class="icon-label-future" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+                <engine:VisualElement class="factory-box" style="border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgb(0, 119, 0); border-right-color: rgb(0, 119, 0); border-top-color: rgb(0, 119, 0); border-bottom-color: rgb(0, 119, 0);">
+                    <engine:VisualElement class="visual-section">
+                        <engine:Image source="path/to/image1.jpg" class="factory-image" />
+                        <engine:VisualElement class="sub-visual-section">
+                            <engine:Label text="Factory 1" class="factory-name" />
+                            <engine:VisualElement class="factory-count">
+                                <engine:Label text="Factory count :" class="text-label" />
+                                <engine:Label text="5" class="count-label" />
+                            </engine:VisualElement>
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                    <engine:VisualElement class="management-section">
+                        <engine:VisualElement class="current-productivity">
+                            <engine:Label class="icon-label-current" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
+                        <engine:Button text="100$" class="improve-price-btn" />
+                        <engine:VisualElement class="future-productivity">
+                            <engine:Label class="icon-label-future" />
+                            <engine:Label text="100" class="price-label" />
+                        </engine:VisualElement>
+                    </engine:VisualElement>
+                </engine:VisualElement>
+            </engine:ScrollView>
+
             <engine:VisualElement class="background">
                 <engine:ScrollView name="category2-container" class="category2-container">
                     <engine:VisualElement class="grid">

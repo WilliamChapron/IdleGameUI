@@ -284,7 +284,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &97917494
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,6 +969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcb17b6f9e4506745bf44760d602f1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uIDocument: {fileID: 0}
 --- !u!114 &877529913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1497,7 +1498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1906691541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1541,6 +1542,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ba1243bf85d554aa38eecb020a4a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_uiDocument: {fileID: 1906691541}
+  handCursorTexture: {fileID: 2800000, guid: 5c0e13e964e4d78409ca6867d9fb9f40, type: 3}
+  isMarketplaceVisible: 0
 --- !u!114 &1906691544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,6 +1557,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 767ca01628a025b43bc3b2d4a15bdb3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_uiDocument: {fileID: 1906691541}
+  bonusItemTemplate: {fileID: 9197481963319205126, guid: 0e5109e3811db084195f6cb82eaf481e, type: 3}
 --- !u!1 &1962562056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,7 +1576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1962562057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1614,6 +1620,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdebf33ff3d6ed743b8b7eb27b9ae930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainUIDocument: {fileID: 1962562057}
+  marketplaceUI: {fileID: 0}
 --- !u!1 &1976269014
 GameObject:
   m_ObjectHideFlags: 0
