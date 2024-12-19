@@ -14,23 +14,40 @@
 }
 
 .menu-principal {
+    left: 50%;
+    top:50%;
+    translate: -50% -50%;
+    width: 100%;
+    height: auto;
+    padding:100px;
+    background-color: transparent;
     background-size: cover;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    transition-duration: 0.7s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    -unity-font-definition: url("project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&guid=f39766804d4f264409c44e46b6697e49&type=3#Winter Minie");
+    background-image: url("project://database/Assets/UISprite/gold_bg.png?fileID=-2634831319402149282&guid=d31cfd38f06862a499e0ee999fcf81dd&type=3#gold_bg_2");
+    -unity-background-scale-mode: stretch-to-fill;
 }
 
 .navigation-buttons {
     display: flex;
+    justify-content:center;
+    margin-bottom:60px;
     flex-direction: row;
+    left:0;
+    top:0;
 }
 
 .category-button {
+    margin-left:40px;
+    margin-right:40px;
     background-color: rgba(0, 123, 255, 0);
     color: black;
-    margin-top: 18px;
-    padding: 30px 40px;
+    padding: 40px 40px;
     border-radius: 8px;
     font-weight: bold;
     cursor: pointer;
@@ -44,15 +61,12 @@
 
 .category-button:hover {
     scale: 1.1;
-    cursor: link;
 }
 
 .category-container {
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 8px;
-    width: 70%;
     background-color: transparent;
-    padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: row;
@@ -75,8 +89,9 @@
     align-items: center;
     flex-direction: column;
     background-color: white;
-    width: 30%;
-    height: auto;
+    height: 400px;
+    width:300px;
+    margin-left:20px;
     border-top-width: 5px;
     border-right-width: 5px;
     border-bottom-width: 5px;
@@ -92,10 +107,10 @@
 }
 
 .factory-image {
-    background-image: url("project://database/Assets/UISprite/detailed-greenhouse.png?fileID=2800000&guid=a3b4d7e1a9e1e2e49a52b568ba6b49f3&type=3#detailed-greenhouse");
+    background-image: url("project://database/Assets/UISprite/illustration-of-cute-cozy-greenhouse-for-decorative-flowers-vector-removebg-preview.png?fileID=2800000&guid=a3b4d7e1a9e1e2e49a52b568ba6b49f3&type=3#illustration-of-cute-cozy-greenhouse-for-decorative-flowers-vector-removebg-preview");
     background-size: contain;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
     margin-top: 10%;
 }
 
@@ -109,7 +124,7 @@
 .factory-price-button {
     background-color: rgb(255, 165, 0);
     color: white;
-    padding: 20px 30px;
+    padding: 30px 50px;
     font-size: 16px;
     font-weight: bold;
     background-color: transparent;
@@ -123,13 +138,16 @@
 
 .category2-container {
     display: flex;
-    justify-content: center;
     align-items: center;
     position: relative;
-    height: 300px;
+    height: 60%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+}
+
+.category2-container .bonus-scrollview {
+    width:70%;
 }
 
 .category2-container .filter-icons-container {
@@ -169,13 +187,4 @@
 
 .category2-container .filter-icon:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.category2-container .bonus-scrollview {
-    width: 80%;
-}
-
-.closed {
-    opacity: 0;
-    transition-duration: 0.7s;
 }

@@ -1,4 +1,6 @@
 .bonus-item {
+    height: 400px;
+    width:200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,6 +12,9 @@
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    -unity-font-definition: url("project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&guid=f39766804d4f264409c44e46b6697e49&type=3#Winter Minie");
+    padding: 15px;  /* Optionnel, si vous voulez plus d'espacement interne */
+
     border-top-width: 3px;
     border-right-width: 3px;
     border-bottom-width: 3px;
@@ -18,10 +23,7 @@
     border-right-color: rgb(0, 48, 0);
     border-top-color: rgb(0, 48, 0);
     border-bottom-color: rgb(0, 48, 0);
-    -unity-font-definition: url("project://database/Assets/UISprite/Winter%20Minie.otf?fileID=12800000&guid=f39766804d4f264409c44e46b6697e49&type=3#Winter Minie");
-    width: 100%;  /* Assure que l'élément occupe toute la largeur du conteneur */
-    height: auto; /* Permet à l'élément de s'adapter à son contenu */
-    padding: 15px;  /* Optionnel, si vous voulez plus d'espacement interne */
+
 }
 
 .bonus-item:hover {
@@ -29,8 +31,8 @@
 }
 
 .bonus-image {
-    width: 80px;
-    height: 80px;
+    width: 100%;  /* Utilisez 100% de la largeur du conteneur parent */
+    height: 100%; /* Ajustez la hauteur proportionnellement à la largeur */
     background-image: url("project://database/Assets/UISprite/illustration-of-cute-cozy-greenhouse-for-decorative-flowers-vector-removebg-preview.png?fileID=-1502392104319349625&guid=a3b4d7e1a9e1e2e49a52b568ba6b49f3&type=3#illustration-of-cute-cozy-greenhouse-for-decorative-flowers-vector-removebg-preview_0");
     background-size: cover;
     background-position: center;

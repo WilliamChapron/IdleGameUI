@@ -8,10 +8,7 @@
             <engine:Button text="BONUSES" name="category2-button" class="category-button" style="border-left-color: rgb(104, 104, 104); border-right-color: rgb(104, 104, 104); border-top-color: rgb(104, 104, 104); border-bottom-color: rgb(104, 104, 104); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
         </engine:VisualElement>
 
-
-
-
-                <engine:VisualElement name="category1-container" class="category-container">
+        <engine:ScrollView name="category1-container" class="category-container bonus-scrollview unity-scroll-view--horizontal">
             <engine:VisualElement name="factory-box" class="factory-box">
                 <engine:Label text="Factory 1" name="factory-label" class="factory-label" />
                 <engine:VisualElement name="factory-image" class="factory-image" />
@@ -22,19 +19,47 @@
                 <engine:VisualElement name="factory-image" class="factory-image" />
                 <engine:Button text="Price: $500" name="factory-price-button" class="factory-price-button" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
             </engine:VisualElement>
-        </engine:VisualElement>
-
+            <engine:VisualElement name="factory-box" class="factory-box">
+                <engine:Label text="Factory 2" name="factory-label" class="factory-label" />
+                <engine:VisualElement name="factory-image" class="factory-image" />
+                <engine:Button text="Price: $500" name="factory-price-button" class="factory-price-button" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+            </engine:VisualElement>
+            <engine:VisualElement name="factory-box" class="factory-box">
+                <engine:Label text="Factory 2" name="factory-label" class="factory-label" />
+                <engine:VisualElement name="factory-image" class="factory-image" />
+                <engine:Button text="Price: $500" name="factory-price-button" class="factory-price-button" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+            </engine:VisualElement>
+            <engine:VisualElement name="factory-box" class="factory-box">
+                <engine:Label text="Factory 2" name="factory-label" class="factory-label" />
+                <engine:VisualElement name="factory-image" class="factory-image" />
+                <engine:Button text="Price: $500" name="factory-price-button" class="factory-price-button" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+            </engine:VisualElement>
+            <engine:VisualElement name="factory-box" class="factory-box">
+                <engine:Label text="Factory 2" name="factory-label" class="factory-label" />
+                <engine:VisualElement name="factory-image" class="factory-image" />
+                <engine:Button text="Price: $500" name="factory-price-button" class="factory-price-button" style="border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-left-color: rgba(149, 149, 149, 0); border-right-color: rgba(149, 149, 149, 0); border-top-color: rgba(149, 149, 149, 0); border-bottom-color: rgba(149, 149, 149, 0);" />
+            </engine:VisualElement>
+        </engine:ScrollView>
 
         <engine:VisualElement name="category2-container" class="category2-container">
-             <engine:Label text="Current Type" name="current-filter-type" class="current-filter-type" />
+            <engine:Label text="Current Type" name="current-filter-type" class="current-filter-type" />
             <engine:VisualElement class="filter-icons-container">
-                <engine:Button class="filter-icon" name="all-type" style="-unity-background-scale-mode: scale-to-fit;" />
-                <engine:Button class="filter-icon" name="factorywide-type" />
-                <engine:Button class="filter-icon" name="global-type" />
+                <engine:Button name="all-type" class="filter-icon" style="-unity-background-scale-mode: scale-to-fit;" />
+                <engine:Button name="factorywide-type" class="filter-icon" />
+                <engine:Button name="global-type" class="filter-icon" />
             </engine:VisualElement>
             <engine:ScrollView name="bonus-scrollview" class="bonus-scrollview unity-scroll-view--horizontal">
-                <engine:Instance template="BonusItem" style="visibility: visible; display: none;" />
+                <engine:Instance template="BonusItem" style="visibility: visible; display: flex;" />
+                <engine:Instance template="BonusItem" style="visibility: visible; display: flex;" />
+                <engine:Instance template="BonusItem" style="visibility: visible; display: flex;" />
+                <engine:Instance template="BonusItem" style="visibility: visible; display: flex;" />
+                <engine:Instance template="BonusItem" style="visibility: visible; display: flex;" />
+                <engine:Instance template="BonusItem" style="visibility: visible; display: flex;" />
+                <engine:Instance template="BonusItem" style="visibility: visible; display: flex;" />
+                <engine:Instance template="BonusItem" style="visibility: visible; display: flex;" />
             </engine:ScrollView>
         </engine:VisualElement>
+
+        
     </engine:VisualElement>
 </engine:UXML>
